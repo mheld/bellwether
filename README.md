@@ -57,12 +57,15 @@ npm run build:data   # recompile after editing any city file (also runs via preb
 ```
 
 `build:data` fails loudly on an invalid record or an unknown `source` id, so a broken dataset
-can never ship. The current values are an **approximate seed** — see the in-app Methodology
-page for sourcing and confidence. To add or correct a city, edit its JSON file (every value
-carries `source`, `asOf`, and `confidence`) and re-run `build:data`.
+can never ship. Most values are **sourced from authoritative datasets** at varying confidence —
+GaWC 2024 (tier), PwC (tax), EF EPI 2024 (English), World Bank WGI (stability), Numbeo
+(cost/housing/healthcare/safety), FlightsFrom (connectivity), WRI Aqueduct + IPCC/CCKP (climate
+bands), and InterNations (expat). See the in-app Methodology page for the full confidence
+breakdown. Every value carries `source`, `asOf`, and `confidence`. To add or correct a city,
+edit its JSON file and re-run `build:data`.
 
-`scripts/seed-cities.ts` is a one-time generator that produced the initial files from a compact
-table; it isn't part of the build.
+`scripts/seed-cities.ts` regenerates the per-city files from a compact table plus verified
+lookup maps; it's a generator, not part of the app build.
 
 ## How scoring works
 

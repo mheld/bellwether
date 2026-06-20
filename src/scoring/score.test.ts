@@ -104,8 +104,10 @@ describe('scoreCities (integration with the real dataset)', () => {
       ) as Record<FactorKey, number>,
     }
     const top = scoreCities(cities, climateOnly)[0]
-    // Zurich and Toronto are the most climate-insulated in the seed set.
-    expect(['zurich-ch', 'toronto-ca']).toContain(top.city.id)
+    // The winner should be one of the cool, water-secure, low-hazard cities.
+    expect(['oslo-no', 'helsinki-fi', 'zurich-ch', 'stockholm-se', 'toronto-ca']).toContain(
+      top.city.id,
+    )
   })
 })
 

@@ -1,0 +1,232 @@
+{
+  "id": "shanghai-cn",
+  "name": "Shanghai",
+  "country": "China",
+  "countryCode": "CN",
+  "region": "East Asia",
+  "coords": {
+    "lat": 31.23,
+    "lng": 121.47
+  },
+  "population": {
+    "value": 29000000,
+    "source": "un-wup-2018",
+    "asOf": "2020",
+    "confidence": "medium"
+  },
+  "blurb": "China’s commercial capital on a sinking coastal delta — flood, subsidence and typhoon exposed.",
+  "factors": {
+    "importance": {
+      "value": "Alpha+",
+      "source": "gawc-2024",
+      "asOf": "2024",
+      "confidence": "high"
+    },
+    "climate": {
+      "hazards": {
+        "heat": {
+          "now": {
+            "value": 50,
+            "source": "worldbank-cckp",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 62,
+            "source": "worldbank-cckp",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 70,
+            "source": "worldbank-cckp",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "drought": {
+          "now": {
+            "value": 25,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 32,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 40,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "flood": {
+          "now": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 65,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 73,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "wildfire": {
+          "now": {
+            "value": 6,
+            "source": "bellwether-rubric",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 10,
+            "source": "bellwether-rubric",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 14,
+            "source": "bellwether-rubric",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "waterStress": {
+          "now": {
+            "value": 40,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 48,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 56,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        }
+      }
+    },
+    "airport": {
+      "primaryIata": "PVG",
+      "directDestinations": {
+        "value": 140,
+        "source": "openflights-2024",
+        "asOf": "2024",
+        "confidence": "medium"
+      }
+    },
+    "realEstate": {
+      "buyPricePerSqmUsd": {
+        "value": 12000,
+        "source": "numbeo-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      },
+      "rent1brCenterUsd": {
+        "value": 1300,
+        "source": "numbeo-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      }
+    },
+    "taxation": {
+      "topIncomeRatePct": {
+        "value": 45,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "capitalGainsRatePct": {
+        "value": 20,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      },
+      "regime": {
+        "value": "worldwide",
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      },
+      "hasExpatRegime": {
+        "value": false,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      }
+    },
+    "expat": {
+      "value": 50,
+      "source": "internations-2024",
+      "asOf": "2024",
+      "confidence": "low",
+      "note": "Country-level survey; city value estimated."
+    },
+    "costOfLiving": {
+      "value": 70,
+      "source": "numbeo-2025",
+      "asOf": "2025",
+      "confidence": "medium"
+    },
+    "healthcare": {
+      "value": 76,
+      "source": "numbeo-2025",
+      "asOf": "2025",
+      "confidence": "medium"
+    },
+    "safety": {
+      "crimeSafetyIndex": {
+        "value": 80,
+        "source": "numbeo-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      },
+      "politicalStability": {
+        "value": 0.4,
+        "source": "worldbank-wgi-2023",
+        "asOf": "2023",
+        "confidence": "high"
+      }
+    },
+    "accessibility": {
+      "englishProficiency": {
+        "value": 40,
+        "source": "ef-epi-2024",
+        "asOf": "2024",
+        "confidence": "medium"
+      },
+      "visaEaseIndex": {
+        "value": 35,
+        "source": "bellwether-rubric",
+        "asOf": "2026",
+        "confidence": "low",
+        "note": "Curated residency-pathway estimate."
+      }
+    }
+  }
+}

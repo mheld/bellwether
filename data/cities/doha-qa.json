@@ -1,0 +1,232 @@
+{
+  "id": "doha-qa",
+  "name": "Doha",
+  "country": "Qatar",
+  "countryCode": "QA",
+  "region": "Middle East",
+  "coords": {
+    "lat": 25.29,
+    "lng": 51.53
+  },
+  "population": {
+    "value": 2400000,
+    "source": "un-wup-2018",
+    "asOf": "2020",
+    "confidence": "medium"
+  },
+  "blurb": "Tax-free Gulf hub; extreme heat and water stress dominate, other hazards low.",
+  "factors": {
+    "importance": {
+      "value": "Beta",
+      "source": "gawc-2024",
+      "asOf": "2024",
+      "confidence": "high"
+    },
+    "climate": {
+      "hazards": {
+        "heat": {
+          "now": {
+            "value": 78,
+            "source": "worldbank-cckp",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 88,
+            "source": "worldbank-cckp",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 94,
+            "source": "worldbank-cckp",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "drought": {
+          "now": {
+            "value": 70,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 78,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 85,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "flood": {
+          "now": {
+            "value": 18,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 24,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 30,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "wildfire": {
+          "now": {
+            "value": 2,
+            "source": "bellwether-rubric",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 3,
+            "source": "bellwether-rubric",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 4,
+            "source": "bellwether-rubric",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "waterStress": {
+          "now": {
+            "value": 88,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 92,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 95,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        }
+      }
+    },
+    "airport": {
+      "primaryIata": "DOH",
+      "directDestinations": {
+        "value": 170,
+        "source": "openflights-2024",
+        "asOf": "2024",
+        "confidence": "medium"
+      }
+    },
+    "realEstate": {
+      "buyPricePerSqmUsd": {
+        "value": 4000,
+        "source": "numbeo-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      },
+      "rent1brCenterUsd": {
+        "value": 1700,
+        "source": "numbeo-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      }
+    },
+    "taxation": {
+      "topIncomeRatePct": {
+        "value": 0,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "capitalGainsRatePct": {
+        "value": 0,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      },
+      "regime": {
+        "value": "none",
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      },
+      "hasExpatRegime": {
+        "value": false,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      }
+    },
+    "expat": {
+      "value": 60,
+      "source": "internations-2024",
+      "asOf": "2024",
+      "confidence": "low",
+      "note": "Country-level survey; city value estimated."
+    },
+    "costOfLiving": {
+      "value": 65,
+      "source": "numbeo-2025",
+      "asOf": "2025",
+      "confidence": "medium"
+    },
+    "healthcare": {
+      "value": 74,
+      "source": "numbeo-2025",
+      "asOf": "2025",
+      "confidence": "medium"
+    },
+    "safety": {
+      "crimeSafetyIndex": {
+        "value": 88,
+        "source": "numbeo-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      },
+      "politicalStability": {
+        "value": 0.7,
+        "source": "worldbank-wgi-2023",
+        "asOf": "2023",
+        "confidence": "high"
+      }
+    },
+    "accessibility": {
+      "englishProficiency": {
+        "value": 65,
+        "source": "ef-epi-2024",
+        "asOf": "2024",
+        "confidence": "medium"
+      },
+      "visaEaseIndex": {
+        "value": 65,
+        "source": "bellwether-rubric",
+        "asOf": "2026",
+        "confidence": "low",
+        "note": "Curated residency-pathway estimate."
+      }
+    }
+  }
+}

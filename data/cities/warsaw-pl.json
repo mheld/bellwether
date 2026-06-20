@@ -1,0 +1,232 @@
+{
+  "id": "warsaw-pl",
+  "name": "Warsaw",
+  "country": "Poland",
+  "countryCode": "PL",
+  "region": "Central Europe",
+  "coords": {
+    "lat": 52.23,
+    "lng": 21.01
+  },
+  "population": {
+    "value": 1800000,
+    "source": "un-wup-2018",
+    "asOf": "2020",
+    "confidence": "medium"
+  },
+  "blurb": "Fast-growing and affordable; continental climate with modest hazard.",
+  "factors": {
+    "importance": {
+      "value": "Alpha-",
+      "source": "gawc-2024",
+      "asOf": "2024",
+      "confidence": "high"
+    },
+    "climate": {
+      "hazards": {
+        "heat": {
+          "now": {
+            "value": 28,
+            "source": "worldbank-cckp",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 40,
+            "source": "worldbank-cckp",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 50,
+            "source": "worldbank-cckp",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "drought": {
+          "now": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 45,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 54,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "flood": {
+          "now": {
+            "value": 25,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 32,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 40,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "wildfire": {
+          "now": {
+            "value": 12,
+            "source": "bellwether-rubric",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 18,
+            "source": "bellwether-rubric",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 24,
+            "source": "bellwether-rubric",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "waterStress": {
+          "now": {
+            "value": 30,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 38,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 46,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        }
+      }
+    },
+    "airport": {
+      "primaryIata": "WAW",
+      "directDestinations": {
+        "value": 130,
+        "source": "openflights-2024",
+        "asOf": "2024",
+        "confidence": "medium"
+      }
+    },
+    "realEstate": {
+      "buyPricePerSqmUsd": {
+        "value": 4500,
+        "source": "numbeo-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      },
+      "rent1brCenterUsd": {
+        "value": 1000,
+        "source": "numbeo-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      }
+    },
+    "taxation": {
+      "topIncomeRatePct": {
+        "value": 32,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "capitalGainsRatePct": {
+        "value": 19,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      },
+      "regime": {
+        "value": "worldwide",
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      },
+      "hasExpatRegime": {
+        "value": false,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      }
+    },
+    "expat": {
+      "value": 60,
+      "source": "internations-2024",
+      "asOf": "2024",
+      "confidence": "low",
+      "note": "Country-level survey; city value estimated."
+    },
+    "costOfLiving": {
+      "value": 55,
+      "source": "numbeo-2025",
+      "asOf": "2025",
+      "confidence": "medium"
+    },
+    "healthcare": {
+      "value": 74,
+      "source": "numbeo-2025",
+      "asOf": "2025",
+      "confidence": "medium"
+    },
+    "safety": {
+      "crimeSafetyIndex": {
+        "value": 75,
+        "source": "numbeo-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      },
+      "politicalStability": {
+        "value": 0.5,
+        "source": "worldbank-wgi-2023",
+        "asOf": "2023",
+        "confidence": "high"
+      }
+    },
+    "accessibility": {
+      "englishProficiency": {
+        "value": 62,
+        "source": "ef-epi-2024",
+        "asOf": "2024",
+        "confidence": "medium"
+      },
+      "visaEaseIndex": {
+        "value": 55,
+        "source": "bellwether-rubric",
+        "asOf": "2026",
+        "confidence": "low",
+        "note": "Curated residency-pathway estimate."
+      }
+    }
+  }
+}

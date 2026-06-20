@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+/* ---- Bellwether design tokens ----
+   A calm, cartographic palette: deep slate ink, warm paper, and a single
+   signal accent (amber→ember) used to encode climate risk and ranking. */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Archivo', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
+
+  --color-paper: oklch(0.98 0.008 95);
+  --color-paper-raised: oklch(1 0 0);
+  --color-ink: oklch(0.24 0.02 250);
+  --color-ink-soft: oklch(0.45 0.02 250);
+  --color-ink-faint: oklch(0.62 0.015 250);
+  --color-line: oklch(0.9 0.01 250);
+  --color-line-strong: oklch(0.82 0.012 250);
+
+  /* signal accent — ranking + good outcomes */
+  --color-signal: oklch(0.62 0.13 200);
+  --color-signal-soft: oklch(0.93 0.04 200);
+
+  /* risk ramp — climate hazard severity (good → bad) */
+  --color-risk-0: oklch(0.7 0.13 160);
+  --color-risk-1: oklch(0.82 0.13 110);
+  --color-risk-2: oklch(0.78 0.15 70);
+  --color-risk-3: oklch(0.66 0.18 40);
+  --color-risk-4: oklch(0.55 0.2 25);
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tabular figures for all the numeric scores so columns line up. */
+.nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

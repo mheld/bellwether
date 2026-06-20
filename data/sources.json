@@ -1,0 +1,86 @@
+[
+  {
+    "id": "gawc-2024",
+    "name": "The World According to GaWC 2024",
+    "url": "https://www.lboro.ac.uk/gawc/world2024t.html",
+    "publisher": "Globalization and World Cities Research Network, Loughborough University",
+    "accessedOn": "2026-06"
+  },
+  {
+    "id": "wri-aqueduct-40",
+    "name": "Aqueduct Water Risk Atlas 4.0",
+    "url": "https://www.wri.org/aqueduct",
+    "publisher": "World Resources Institute",
+    "accessedOn": "2026-06"
+  },
+  {
+    "id": "ipcc-ar6-atlas",
+    "name": "AR6 WGI Interactive Atlas",
+    "url": "https://interactive-atlas.ipcc.ch/",
+    "publisher": "Intergovernmental Panel on Climate Change",
+    "accessedOn": "2026-06"
+  },
+  {
+    "id": "worldbank-cckp",
+    "name": "Climate Change Knowledge Portal",
+    "url": "https://climateknowledgeportal.worldbank.org/",
+    "publisher": "World Bank Group",
+    "accessedOn": "2026-06"
+  },
+  {
+    "id": "openflights-2024",
+    "name": "OpenFlights Routes Database",
+    "url": "https://openflights.org/data.html",
+    "publisher": "OpenFlights",
+    "accessedOn": "2026-06"
+  },
+  {
+    "id": "numbeo-2025",
+    "name": "Numbeo Cost of Living, Property, Health Care & Crime Indices",
+    "url": "https://www.numbeo.com/",
+    "publisher": "Numbeo",
+    "accessedOn": "2026-06"
+  },
+  {
+    "id": "pwc-tax-2025",
+    "name": "Worldwide Tax Summaries",
+    "url": "https://taxsummaries.pwc.com/",
+    "publisher": "PwC",
+    "accessedOn": "2026-06"
+  },
+  {
+    "id": "worldbank-wgi-2023",
+    "name": "Worldwide Governance Indicators — Political Stability",
+    "url": "https://www.worldbank.org/en/publication/worldwide-governance-indicators",
+    "publisher": "World Bank Group",
+    "accessedOn": "2026-06"
+  },
+  {
+    "id": "ef-epi-2024",
+    "name": "EF English Proficiency Index 2024",
+    "url": "https://www.ef.com/epi/",
+    "publisher": "EF Education First",
+    "accessedOn": "2026-06"
+  },
+  {
+    "id": "internations-2024",
+    "name": "Expat Insider 2024",
+    "url": "https://www.internations.org/expat-insider/",
+    "publisher": "InterNations",
+    "accessedOn": "2026-06"
+  },
+  {
+    "id": "un-wup-2018",
+    "name": "World Urbanization Prospects (urban agglomerations)",
+    "url": "https://population.un.org/wup/",
+    "publisher": "United Nations DESA",
+    "accessedOn": "2026-06"
+  },
+  {
+    "id": "bellwether-rubric",
+    "name": "Bellwether curated rubric",
+    "url": "https://github.com/",
+    "publisher": "Bellwether (curated estimate)",
+    "accessedOn": "2026-06"
+  }
+]

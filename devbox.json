@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.17.2/.schema/devbox.schema.json",
+  "packages": ["nodejs@24"],
+  "shell": {
+    "init_hook": [
+      "node -v >/dev/null 2>&1 && [ -d node_modules ] || npm install --no-fund --no-audit"
+    ],
+    "scripts": {
+      "dev": ["npm run dev"],
+      "build": ["npm run build"],
+      "test": ["npm test"],
+      "data": ["npm run build:data"],
+      "seed": ["npx tsx scripts/seed-cities.ts"],
+      "preview": ["npm run preview"]
+    }
+  }
+}

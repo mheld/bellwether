@@ -134,23 +134,23 @@
     "airport": {
       "primaryIata": "TPE",
       "directDestinations": {
-        "value": 100,
-        "source": "openflights-2024",
-        "asOf": "2024",
+        "value": 102,
+        "source": "flightsfrom-2025",
+        "asOf": "2025",
         "confidence": "medium"
       }
     },
     "realEstate": {
       "buyPricePerSqmUsd": {
-        "value": 11000,
+        "value": 14207,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       },
       "rent1brCenterUsd": {
-        "value": 900,
+        "value": 729,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       }
     },
@@ -188,22 +188,22 @@
       "note": "Country-level survey; city value estimated."
     },
     "costOfLiving": {
-      "value": 65,
+      "value": 54.7,
       "source": "numbeo-2025",
-      "asOf": "2025",
+      "asOf": "2026",
       "confidence": "medium"
     },
     "healthcare": {
-      "value": 86,
+      "value": 87.2,
       "source": "numbeo-2025",
-      "asOf": "2025",
+      "asOf": "2026",
       "confidence": "medium"
     },
     "safety": {
       "crimeSafetyIndex": {
-        "value": 82,
+        "value": 83.5,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       },
       "politicalStability": {

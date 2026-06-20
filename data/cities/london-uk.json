@@ -134,23 +134,23 @@
     "airport": {
       "primaryIata": "LHR",
       "directDestinations": {
-        "value": 190,
-        "source": "openflights-2024",
-        "asOf": "2024",
+        "value": 223,
+        "source": "flightsfrom-2025",
+        "asOf": "2025",
         "confidence": "medium"
       }
     },
     "realEstate": {
       "buyPricePerSqmUsd": {
-        "value": 13000,
+        "value": 19874,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       },
       "rent1brCenterUsd": {
-        "value": 2200,
+        "value": 3029,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       }
     },
@@ -188,22 +188,22 @@
       "note": "Country-level survey; city value estimated."
     },
     "costOfLiving": {
-      "value": 85,
+      "value": 87.5,
       "source": "numbeo-2025",
-      "asOf": "2025",
+      "asOf": "2026",
       "confidence": "medium"
     },
     "healthcare": {
-      "value": 78,
+      "value": 69.5,
       "source": "numbeo-2025",
-      "asOf": "2025",
+      "asOf": "2026",
       "confidence": "medium"
     },
     "safety": {
       "crimeSafetyIndex": {
-        "value": 65,
+        "value": 44.4,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       },
       "politicalStability": {

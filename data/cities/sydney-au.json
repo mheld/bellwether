@@ -135,22 +135,22 @@
       "primaryIata": "SYD",
       "directDestinations": {
         "value": 100,
-        "source": "openflights-2024",
-        "asOf": "2024",
+        "source": "flightsfrom-2025",
+        "asOf": "2025",
         "confidence": "medium"
       }
     },
     "realEstate": {
       "buyPricePerSqmUsd": {
-        "value": 9500,
+        "value": 11945,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       },
       "rent1brCenterUsd": {
-        "value": 1900,
+        "value": 2270,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       }
     },
@@ -188,22 +188,22 @@
       "note": "Country-level survey; city value estimated."
     },
     "costOfLiving": {
-      "value": 82,
+      "value": 75.1,
       "source": "numbeo-2025",
-      "asOf": "2025",
+      "asOf": "2026",
       "confidence": "medium"
     },
     "healthcare": {
-      "value": 80,
+      "value": 74.8,
       "source": "numbeo-2025",
-      "asOf": "2025",
+      "asOf": "2026",
       "confidence": "medium"
     },
     "safety": {
       "crimeSafetyIndex": {
-        "value": 72,
+        "value": 66,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       },
       "politicalStability": {

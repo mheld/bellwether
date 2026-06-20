@@ -134,23 +134,23 @@
     "airport": {
       "primaryIata": "JFK",
       "directDestinations": {
-        "value": 180,
-        "source": "openflights-2024",
-        "asOf": "2024",
+        "value": 198,
+        "source": "flightsfrom-2025",
+        "asOf": "2025",
         "confidence": "medium"
       }
     },
     "realEstate": {
       "buyPricePerSqmUsd": {
-        "value": 16000,
+        "value": 17938,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       },
       "rent1brCenterUsd": {
-        "value": 3500,
+        "value": 4285,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       }
     },
@@ -190,20 +190,20 @@
     "costOfLiving": {
       "value": 100,
       "source": "numbeo-2025",
-      "asOf": "2025",
+      "asOf": "2026",
       "confidence": "medium"
     },
     "healthcare": {
-      "value": 72,
+      "value": 62.8,
       "source": "numbeo-2025",
-      "asOf": "2025",
+      "asOf": "2026",
       "confidence": "medium"
     },
     "safety": {
       "crimeSafetyIndex": {
-        "value": 60,
+        "value": 48.9,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       },
       "politicalStability": {

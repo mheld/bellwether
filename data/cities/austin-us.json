@@ -134,23 +134,23 @@
     "airport": {
       "primaryIata": "AUS",
       "directDestinations": {
-        "value": 95,
-        "source": "openflights-2024",
-        "asOf": "2024",
+        "value": 98,
+        "source": "flightsfrom-2025",
+        "asOf": "2025",
         "confidence": "medium"
       }
     },
     "realEstate": {
       "buyPricePerSqmUsd": {
-        "value": 4200,
+        "value": 7150,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       },
       "rent1brCenterUsd": {
-        "value": 1600,
+        "value": 1927,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       }
     },
@@ -188,22 +188,22 @@
       "note": "Country-level survey; city value estimated."
     },
     "costOfLiving": {
-      "value": 68,
+      "value": 66.4,
       "source": "numbeo-2025",
-      "asOf": "2025",
+      "asOf": "2026",
       "confidence": "medium"
     },
     "healthcare": {
-      "value": 70,
+      "value": 64.9,
       "source": "numbeo-2025",
-      "asOf": "2025",
+      "asOf": "2026",
       "confidence": "medium"
     },
     "safety": {
       "crimeSafetyIndex": {
-        "value": 60,
+        "value": 55.7,
         "source": "numbeo-2025",
-        "asOf": "2025",
+        "asOf": "2026",
         "confidence": "medium"
       },
       "politicalStability": {

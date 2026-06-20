@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "baselineYear": 2025,
-  "generatedAt": "2026-06-20T16:36:29.632Z",
+  "generatedAt": "2026-06-20T16:53:41.685Z",
   "sources": [
     {
       "id": "gawc-2024",
@@ -36,6 +36,13 @@
       "name": "OpenFlights Routes Database",
       "url": "https://openflights.org/data.html",
       "publisher": "OpenFlights",
+      "accessedOn": "2026-06"
+    },
+    {
+      "id": "flightsfrom-2025",
+      "name": "FlightsFrom — nonstop destinations by airport",
+      "url": "https://www.flightsfrom.com/",
+      "publisher": "FlightsFrom",
       "accessedOn": "2026-06"
     },
     {
@@ -225,23 +232,23 @@
         "airport": {
           "primaryIata": "AMS",
           "directDestinations": {
-            "value": 200,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 274,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 9000,
+            "value": 10874,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 2100,
+            "value": 2660,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -279,22 +286,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 82,
+          "value": 82.6,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 82,
+          "value": 81.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 75,
+            "value": 74.3,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -457,23 +464,23 @@
         "airport": {
           "primaryIata": "ATH",
           "directDestinations": {
-            "value": 130,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 178,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 3500,
+            "value": 3790,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 900,
+            "value": 674,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -511,22 +518,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 55,
+          "value": 57.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 72,
+          "value": 58.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 62,
+            "value": 44.8,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -689,23 +696,23 @@
         "airport": {
           "primaryIata": "AKL",
           "directDestinations": {
-            "value": 70,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 62,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 8500,
+            "value": 7875,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1700,
+            "value": 1219,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -743,22 +750,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 80,
+          "value": 62.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 78,
+          "value": 69,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 72,
+            "value": 49.5,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -922,23 +929,23 @@
         "airport": {
           "primaryIata": "AUS",
           "directDestinations": {
-            "value": 95,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 98,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 4200,
+            "value": 7150,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1600,
+            "value": 1927,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -976,22 +983,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 68,
+          "value": 66.4,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 70,
+          "value": 64.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 60,
+            "value": 55.7,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -1155,23 +1162,23 @@
         "airport": {
           "primaryIata": "BKK",
           "directDestinations": {
-            "value": 140,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 150,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 4000,
+            "value": 6345,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 700,
+            "value": 667,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -1209,22 +1216,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 48,
+          "value": 41.4,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 74,
+          "value": 77.3,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 62,
+            "value": 61.8,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -1387,23 +1394,23 @@
         "airport": {
           "primaryIata": "BCN",
           "directDestinations": {
-            "value": 160,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 228,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 5000,
+            "value": 7587,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1400,
+            "value": 1676,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -1441,22 +1448,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 55,
+          "value": 59.2,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 80,
+          "value": 76.7,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 62,
+            "value": 48.1,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -1619,23 +1626,23 @@
         "airport": {
           "primaryIata": "BLR",
           "directDestinations": {
-            "value": 60,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 110,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 2500,
+            "value": 1794,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 500,
+            "value": 325,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -1673,22 +1680,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 42,
+          "value": 21.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 64,
+          "value": 65.3,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 58,
+            "value": 46,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -1851,23 +1858,23 @@
         "airport": {
           "primaryIata": "BER",
           "directDestinations": {
-            "value": 150,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 166,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 7500,
+            "value": 9002,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1400,
+            "value": 1518,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -1905,22 +1912,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 62,
+          "value": 70,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 80,
+          "value": 66.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 62,
+            "value": 55.5,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -2083,23 +2090,23 @@
         "airport": {
           "primaryIata": "BOG",
           "directDestinations": {
-            "value": 70,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 101,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 1800,
+            "value": 2165,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 500,
+            "value": 547,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -2137,22 +2144,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 40,
+          "value": 32.8,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
           "value": 66,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 45,
+            "value": 33.3,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -2315,23 +2322,23 @@
         "airport": {
           "primaryIata": "BOS",
           "directDestinations": {
-            "value": 120,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 155,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 8000,
+            "value": 13210,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 2800,
+            "value": 3416,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -2369,22 +2376,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 88,
+          "value": 86.2,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 82,
+          "value": 72,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 62,
+            "value": 60.3,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -2548,23 +2555,23 @@
         "airport": {
           "primaryIata": "BRU",
           "directDestinations": {
-            "value": 180,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 178,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 6000,
+            "value": 4834,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1300,
+            "value": 1247,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -2602,22 +2609,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 72,
+          "value": 73.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 80,
+          "value": 73.6,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 60,
+            "value": 44.6,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -2780,23 +2787,23 @@
         "airport": {
           "primaryIata": "EZE",
           "directDestinations": {
-            "value": 90,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 72,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 2500,
+            "value": 2591,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 600,
+            "value": 742,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -2834,22 +2841,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 38,
+          "value": 48.8,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
           "value": 68,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 50,
+            "value": 37,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -3012,23 +3019,23 @@
         "airport": {
           "primaryIata": "CPT",
           "directDestinations": {
-            "value": 70,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 41,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 2500,
+            "value": 1882,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 700,
+            "value": 853,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -3066,22 +3073,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 45,
+          "value": 39.6,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 64,
+          "value": 68.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 40,
+            "value": 26.3,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -3244,23 +3251,23 @@
         "airport": {
           "primaryIata": "ORD",
           "directDestinations": {
-            "value": 170,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 282,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 4500,
+            "value": 3889,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1900,
+            "value": 2407,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -3298,22 +3305,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 75,
+          "value": 76,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 74,
+          "value": 64.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 52,
+            "value": 34.5,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -3477,23 +3484,23 @@
         "airport": {
           "primaryIata": "CPH",
           "directDestinations": {
-            "value": 150,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 200,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 8500,
+            "value": 11953,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1800,
+            "value": 2034,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -3531,22 +3538,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 90,
+          "value": 85.7,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 84,
+          "value": 78,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 82,
+            "value": 74.3,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -3709,23 +3716,23 @@
         "airport": {
           "primaryIata": "DOH",
           "directDestinations": {
-            "value": 170,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 185,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 4000,
+            "value": 4475,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1700,
+            "value": 2087,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -3763,22 +3770,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 65,
+          "value": 49.7,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 74,
+          "value": 73.6,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 88,
+            "value": 84.5,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -3941,23 +3948,23 @@
         "airport": {
           "primaryIata": "DXB",
           "directDestinations": {
-            "value": 260,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 270,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 4500,
+            "value": 7244,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1700,
+            "value": 2421,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -3995,22 +4002,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 62,
+          "value": 61.8,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 70,
+          "value": 69.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 85,
+            "value": 83.9,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -4173,23 +4180,23 @@
         "airport": {
           "primaryIata": "DUB",
           "directDestinations": {
-            "value": 120,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 202,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 9000,
+            "value": 8496,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 2400,
+            "value": 2464,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -4227,22 +4234,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 85,
+          "value": 76.7,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 72,
+          "value": 51.3,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 66,
+            "value": 45.8,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -4406,23 +4413,23 @@
         "airport": {
           "primaryIata": "FRA",
           "directDestinations": {
-            "value": 220,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 288,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 8000,
+            "value": 7884,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1400,
+            "value": 1298,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -4460,22 +4467,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 72,
+          "value": 74,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 82,
+          "value": 78.2,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 70,
+            "value": 55.5,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -4638,23 +4645,23 @@
         "airport": {
           "primaryIata": "HEL",
           "directDestinations": {
-            "value": 130,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 134,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 7000,
+            "value": 10211,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1300,
+            "value": 1303,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -4692,22 +4699,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 78,
+          "value": 74.3,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 82,
+          "value": 80.3,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 82,
+            "value": 74.6,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -4870,23 +4877,23 @@
         "airport": {
           "primaryIata": "SGN",
           "directDestinations": {
-            "value": 80,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 88,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 4500,
+            "value": 4328,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 700,
+            "value": 552,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -4924,22 +4931,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 45,
+          "value": 28.2,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 66,
+          "value": 62.6,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 62,
+            "value": 49.6,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -5102,23 +5109,23 @@
         "airport": {
           "primaryIata": "HKG",
           "directDestinations": {
-            "value": 160,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 145,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 28000,
+            "value": 27906,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 2200,
+            "value": 2225,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -5156,22 +5163,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 95,
+          "value": 75.2,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 84,
+          "value": 66.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 80,
+            "value": 78.6,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -5334,23 +5341,23 @@
         "airport": {
           "primaryIata": "IST",
           "directDestinations": {
-            "value": 230,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 316,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 3500,
+            "value": 3164,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 800,
+            "value": 1066,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -5388,22 +5395,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 50,
+          "value": 43.8,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 72,
+          "value": 70.1,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 60,
+            "value": 52,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -5566,23 +5573,23 @@
         "airport": {
           "primaryIata": "CGK",
           "directDestinations": {
-            "value": 90,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 92,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 3500,
+            "value": 2808,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 700,
+            "value": 362,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -5620,22 +5627,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 45,
+          "value": 29.8,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 64,
+          "value": 57.2,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 55,
+            "value": 47.2,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -5798,23 +5805,23 @@
         "airport": {
           "primaryIata": "KUL",
           "directDestinations": {
-            "value": 130,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 142,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 2500,
+            "value": 3968,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 600,
+            "value": 616,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -5852,22 +5859,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 45,
+          "value": 37.4,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 76,
+          "value": 69.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 60,
+            "value": 40.9,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -6030,23 +6037,23 @@
         "airport": {
           "primaryIata": "LIS",
           "directDestinations": {
-            "value": 150,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 153,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 5500,
+            "value": 7891,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1400,
+            "value": 1642,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -6084,22 +6091,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 50,
+          "value": 54.2,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 72,
+          "value": 72.4,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 75,
+            "value": 67.4,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -6262,23 +6269,23 @@
         "airport": {
           "primaryIata": "LHR",
           "directDestinations": {
-            "value": 190,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 223,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 13000,
+            "value": 19874,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 2200,
+            "value": 3029,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -6316,22 +6323,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 85,
+          "value": 87.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 78,
+          "value": 69.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 65,
+            "value": 44.4,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -6495,23 +6502,23 @@
         "airport": {
           "primaryIata": "LAX",
           "directDestinations": {
-            "value": 160,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 183,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 8500,
+            "value": 7755,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 2400,
+            "value": 2534,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -6549,22 +6556,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 90,
+          "value": 81.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 72,
+          "value": 61.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 55,
+            "value": 45.9,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -6728,23 +6735,23 @@
         "airport": {
           "primaryIata": "MAD",
           "directDestinations": {
-            "value": 180,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 239,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 5200,
+            "value": 9156,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1300,
+            "value": 1608,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -6782,22 +6789,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 48,
+          "value": 60,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 78,
+          "value": 79.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 70,
+            "value": 71.3,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -6960,23 +6967,23 @@
         "airport": {
           "primaryIata": "MDE",
           "directDestinations": {
-            "value": 45,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 39,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 1800,
+            "value": 2575,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 550,
+            "value": 717,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -7014,22 +7021,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 38,
+          "value": 34.4,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 66,
+          "value": 78.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 48,
+            "value": 46.4,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -7192,23 +7199,23 @@
         "airport": {
           "primaryIata": "MEL",
           "directDestinations": {
-            "value": 90,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 70,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 8000,
+            "value": 6578,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1600,
+            "value": 1623,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -7246,22 +7253,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 72,
+          "value": 70.8,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 80,
+          "value": 72.4,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 70,
+            "value": 55.8,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -7425,23 +7432,23 @@
         "airport": {
           "primaryIata": "MEX",
           "directDestinations": {
-            "value": 110,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 103,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 3000,
+            "value": 3716,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 900,
+            "value": 1101,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -7479,22 +7486,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 40,
+          "value": 45.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 62,
+          "value": 65.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 38,
+            "value": 33.2,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -7657,23 +7664,23 @@
         "airport": {
           "primaryIata": "MIA",
           "directDestinations": {
-            "value": 140,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 197,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 6000,
+            "value": 6920,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 2600,
+            "value": 2821,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -7711,22 +7718,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 80,
+          "value": 79.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 70,
+          "value": 63,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 55,
+            "value": 46.7,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -7890,23 +7897,23 @@
         "airport": {
           "primaryIata": "MXP",
           "directDestinations": {
-            "value": 150,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 219,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 6500,
+            "value": 10222,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1500,
+            "value": 1603,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -7944,22 +7951,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 70,
+          "value": 73.1,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 80,
+          "value": 70.3,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 62,
+            "value": 46.5,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -8122,23 +8129,23 @@
         "airport": {
           "primaryIata": "MVD",
           "directDestinations": {
-            "value": 20,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 19,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 2800,
+            "value": 3609,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 800,
+            "value": 742,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -8176,22 +8183,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 45,
+          "value": 57.2,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 70,
+          "value": 68.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 55,
+            "value": 43.5,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -8354,23 +8361,23 @@
         "airport": {
           "primaryIata": "BOM",
           "directDestinations": {
-            "value": 100,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 127,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 9000,
+            "value": 6675,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 900,
+            "value": 657,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -8408,22 +8415,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 50,
+          "value": 26.3,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 60,
+          "value": 65.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 55,
+            "value": 55.9,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -8586,23 +8593,23 @@
         "airport": {
           "primaryIata": "MUC",
           "directDestinations": {
-            "value": 200,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 230,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 11000,
+            "value": 12545,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1600,
+            "value": 1553,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -8640,22 +8647,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 80,
+          "value": 76.1,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 84,
+          "value": 79.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 80,
+            "value": 78.9,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -8818,23 +8825,23 @@
         "airport": {
           "primaryIata": "JFK",
           "directDestinations": {
-            "value": 180,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 198,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 16000,
+            "value": 17938,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 3500,
+            "value": 4285,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -8874,20 +8881,20 @@
         "costOfLiving": {
           "value": 100,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 72,
+          "value": 62.8,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 60,
+            "value": 48.9,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -9051,23 +9058,23 @@
         "airport": {
           "primaryIata": "OSL",
           "directDestinations": {
-            "value": 120,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 151,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 9000,
+            "value": 11606,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1700,
+            "value": 1995,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -9105,22 +9112,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 95,
+          "value": 90.2,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 84,
+          "value": 77.7,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 82,
+            "value": 65.6,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -9283,23 +9290,23 @@
         "airport": {
           "primaryIata": "PTY",
           "directDestinations": {
-            "value": 90,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 94,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 2500,
+            "value": 3128,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1100,
+            "value": 1320,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -9337,22 +9344,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 55,
+          "value": 47,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 70,
+          "value": 60.2,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 58,
+            "value": 52.9,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -9515,23 +9522,23 @@
         "airport": {
           "primaryIata": "CDG",
           "directDestinations": {
-            "value": 200,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 281,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 14000,
+            "value": 14855,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1900,
+            "value": 1575,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -9569,22 +9576,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 80,
+          "value": 78.6,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 82,
+          "value": 77,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 60,
+            "value": 42,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -9747,23 +9754,23 @@
         "airport": {
           "primaryIata": "PRG",
           "directDestinations": {
-            "value": 150,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 165,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 5500,
+            "value": 9154,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1100,
+            "value": 1132,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -9801,22 +9808,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 60,
+          "value": 59.6,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 78,
+          "value": 74.8,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 78,
+            "value": 75.2,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -9979,23 +9986,23 @@
         "airport": {
           "primaryIata": "FCO",
           "directDestinations": {
-            "value": 160,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 249,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 5000,
+            "value": 8067,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1200,
+            "value": 1194,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -10033,22 +10040,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 65,
+          "value": 63.4,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 78,
+          "value": 65,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 60,
+            "value": 52.7,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -10211,23 +10218,23 @@
         "airport": {
           "primaryIata": "SFO",
           "directDestinations": {
-            "value": 130,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 150,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 12000,
+            "value": 10707,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 2900,
+            "value": 3636,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -10265,22 +10272,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 100,
+          "value": 97.6,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 76,
+          "value": 64.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 50,
+            "value": 39.4,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -10444,23 +10451,23 @@
         "airport": {
           "primaryIata": "SCL",
           "directDestinations": {
-            "value": 80,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 63,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 3000,
+            "value": 2808,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 700,
+            "value": 600,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -10498,22 +10505,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 50,
+          "value": 41.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 70,
+          "value": 65.6,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 55,
+            "value": 35.8,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -10676,23 +10683,23 @@
         "airport": {
           "primaryIata": "GRU",
           "directDestinations": {
-            "value": 110,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 112,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 2800,
+            "value": 2546,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 700,
+            "value": 641,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -10730,22 +10737,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 45,
+          "value": 36.8,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 66,
+          "value": 60.3,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 45,
+            "value": 30.1,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -10908,23 +10915,23 @@
         "airport": {
           "primaryIata": "ICN",
           "directDestinations": {
-            "value": 130,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 160,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 13000,
+            "value": 28649,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1100,
+            "value": 836,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -10962,22 +10969,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 78,
+          "value": 68.2,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 86,
+          "value": 82.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 78,
+            "value": 75.3,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -11140,23 +11147,23 @@
         "airport": {
           "primaryIata": "PVG",
           "directDestinations": {
-            "value": 140,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 238,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 12000,
+            "value": 13326,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1300,
+            "value": 884,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -11194,22 +11201,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 70,
+          "value": 38.8,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 76,
+          "value": 66.8,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 80,
+            "value": 73.5,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -11372,23 +11379,23 @@
         "airport": {
           "primaryIata": "SIN",
           "directDestinations": {
-            "value": 160,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 165,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 18000,
+            "value": 23509,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 2800,
+            "value": 2878,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -11426,22 +11433,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 85,
+          "value": 87.7,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 86,
+          "value": 71.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 95,
+            "value": 77.5,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -11604,23 +11611,23 @@
         "airport": {
           "primaryIata": "ARN",
           "directDestinations": {
-            "value": 160,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 172,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 8000,
+            "value": 11741,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1500,
+            "value": 1782,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -11658,22 +11665,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 80,
+          "value": 78.6,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 82,
+          "value": 65.7,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 70,
+            "value": 53.5,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -11837,22 +11844,22 @@
           "primaryIata": "SYD",
           "directDestinations": {
             "value": 100,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 9500,
+            "value": 11945,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1900,
+            "value": 2270,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -11890,22 +11897,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 82,
+          "value": 75.1,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 80,
+          "value": 74.8,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 72,
+            "value": 66,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -12069,23 +12076,23 @@
         "airport": {
           "primaryIata": "TPE",
           "directDestinations": {
-            "value": 100,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 102,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 11000,
+            "value": 14207,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 900,
+            "value": 729,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -12123,22 +12130,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 65,
+          "value": 54.7,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 86,
+          "value": 87.2,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 82,
+            "value": 83.5,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -12302,23 +12309,23 @@
         "airport": {
           "primaryIata": "TBS",
           "directDestinations": {
-            "value": 50,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 64,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 1500,
+            "value": 2371,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 600,
+            "value": 677,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -12356,22 +12363,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 38,
+          "value": 36.6,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 60,
+          "value": 55.3,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 65,
+            "value": 74.6,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -12534,23 +12541,23 @@
         "airport": {
           "primaryIata": "TLV",
           "directDestinations": {
-            "value": 130,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 111,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 11000,
+            "value": 22393,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 2000,
+            "value": 2206,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -12588,22 +12595,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 95,
+          "value": 91.4,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 82,
+          "value": 73.7,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 50,
+            "value": 74.1,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -12766,23 +12773,23 @@
         "airport": {
           "primaryIata": "HND",
           "directDestinations": {
-            "value": 120,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 103,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 12000,
+            "value": 10947,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1300,
+            "value": 1297,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -12820,22 +12827,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 60,
+          "value": 54.2,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 84,
+          "value": 78.7,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 88,
+            "value": 74.9,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -12998,23 +13005,23 @@
         "airport": {
           "primaryIata": "YYZ",
           "directDestinations": {
-            "value": 180,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 194,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 9000,
+            "value": 8927,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1800,
+            "value": 1642,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -13052,22 +13059,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 70,
+          "value": 67.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 75,
+          "value": 74.1,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 72,
+            "value": 56.5,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -13231,23 +13238,23 @@
         "airport": {
           "primaryIata": "YVR",
           "directDestinations": {
-            "value": 130,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 123,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 11000,
+            "value": 9014,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 2200,
+            "value": 1889,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -13285,22 +13292,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 85,
+          "value": 67.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 76,
+          "value": 71.7,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 68,
+            "value": 57.3,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -13464,23 +13471,23 @@
         "airport": {
           "primaryIata": "VIE",
           "directDestinations": {
-            "value": 180,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 202,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 8000,
+            "value": 15397,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1300,
+            "value": 1280,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -13518,22 +13525,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 70,
+          "value": 73.9,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 85,
+          "value": 81.8,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 85,
+            "value": 71.6,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -13696,23 +13703,23 @@
         "airport": {
           "primaryIata": "WAW",
           "directDestinations": {
-            "value": 130,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 150,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 4500,
+            "value": 5752,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 1000,
+            "value": 1146,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -13750,22 +13757,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 55,
+          "value": 53.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 74,
+          "value": 58.4,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 75,
+            "value": 74.6,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {
@@ -13928,23 +13935,23 @@
         "airport": {
           "primaryIata": "ZRH",
           "directDestinations": {
-            "value": 170,
-            "source": "openflights-2024",
-            "asOf": "2024",
+            "value": 213,
+            "source": "flightsfrom-2025",
+            "asOf": "2025",
             "confidence": "medium"
           }
         },
         "realEstate": {
           "buyPricePerSqmUsd": {
-            "value": 17000,
+            "value": 26886,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "rent1brCenterUsd": {
-            "value": 2300,
+            "value": 3040,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           }
         },
@@ -13982,22 +13989,22 @@
           "note": "Country-level survey; city value estimated."
         },
         "costOfLiving": {
-          "value": 115,
+          "value": 118.5,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "healthcare": {
-          "value": 88,
+          "value": 70.6,
           "source": "numbeo-2025",
-          "asOf": "2025",
+          "asOf": "2026",
           "confidence": "medium"
         },
         "safety": {
           "crimeSafetyIndex": {
-            "value": 88,
+            "value": 76.6,
             "source": "numbeo-2025",
-            "asOf": "2025",
+            "asOf": "2026",
             "confidence": "medium"
           },
           "politicalStability": {

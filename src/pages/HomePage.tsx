@@ -91,8 +91,8 @@ export function HomePage() {
           <RankedList ranked={filtered} rankById={rankById} />
 
           <p className="mt-6 text-[11px] leading-relaxed text-ink-faint">
-            Scores are <em>relative</em> within this set of cities, not absolute. Seed
-            values are approximate and being verified — see{' '}
+            Scores are <em>relative</em> within this set of cities, not absolute. Most
+            factors are sourced; climate projections and a few others are estimates — see{' '}
             <Link to="/methodology" className="underline hover:text-ink">
               how the numbers are made
             </Link>

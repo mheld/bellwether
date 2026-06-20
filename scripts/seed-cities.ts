@@ -726,6 +726,72 @@ const GAWC_BY_ID: Record<string, GaWCClass> = {
 
 const epiToScore = (epi: number) => Math.max(0, Math.min(100, Math.round((epi - 350) / 3.1)))
 
+/** Verified per-city figures: nonstop destinations (FlightsFrom) + Numbeo indices
+ * (cost-of-living, health care, safety) and property (USD buy/sqm, 1-bed rent).
+ * [dest, col, health, safety, buy, rent] */
+const CITY_DATA: Record<string, [number, number, number, number, number, number]> = {
+  'lisbon-pt': [153, 54.2, 72.4, 67.4, 7891, 1642],
+  'singapore-sg': [165, 87.7, 71.9, 77.5, 23509, 2878],
+  'toronto-ca': [194, 67.5, 74.1, 56.5, 8927, 1642],
+  'madrid-es': [239, 60.0, 79.9, 71.3, 9156, 1608],
+  'tokyo-jp': [103, 54.2, 78.7, 74.9, 10947, 1297],
+  'dubai-ae': [270, 61.8, 69.9, 83.9, 7244, 2421],
+  'mexico-city-mx': [103, 45.9, 65.5, 33.2, 3716, 1101],
+  'berlin-de': [166, 70.0, 66.5, 55.5, 9002, 1518],
+  'melbourne-au': [70, 70.8, 72.4, 55.8, 6578, 1623],
+  'austin-us': [98, 66.4, 64.9, 55.7, 7150, 1927],
+  'zurich-ch': [213, 118.5, 70.6, 76.6, 26886, 3040],
+  'montevideo-uy': [19, 57.2, 68.5, 43.5, 3609, 742],
+  'london-uk': [223, 87.5, 69.5, 44.4, 19874, 3029],
+  'new-york-us': [198, 100.0, 62.8, 48.9, 17938, 4285],
+  'paris-fr': [281, 78.6, 77.0, 42.0, 14855, 1575],
+  'amsterdam-nl': [274, 82.6, 81.5, 74.3, 10874, 2660],
+  'barcelona-es': [228, 59.2, 76.7, 48.1, 7587, 1676],
+  'vienna-at': [202, 73.9, 81.8, 71.6, 15397, 1280],
+  'copenhagen-dk': [200, 85.7, 78.0, 74.3, 11953, 2034],
+  'stockholm-se': [172, 78.6, 65.7, 53.5, 11741, 1782],
+  'vancouver-ca': [123, 67.5, 71.7, 57.3, 9014, 1889],
+  'buenos-aires-ar': [72, 48.8, 68.0, 37.0, 2591, 742],
+  'santiago-cl': [63, 41.9, 65.6, 35.8, 2808, 600],
+  'auckland-nz': [62, 62.5, 69.0, 49.5, 7875, 1219],
+  'bangkok-th': [150, 41.4, 77.3, 61.8, 6345, 667],
+  'kuala-lumpur-my': [142, 37.4, 69.5, 40.9, 3968, 616],
+  'cape-town-za': [41, 39.6, 68.9, 26.3, 1882, 853],
+  'tbilisi-ge': [64, 36.6, 55.3, 74.6, 2371, 677],
+  'medellin-co': [39, 34.4, 78.9, 46.4, 2575, 717],
+  'dublin-ie': [202, 76.7, 51.3, 45.8, 8496, 2464],
+  'hong-kong-hk': [145, 75.2, 66.5, 78.6, 27906, 2225],
+  'sydney-au': [100, 75.1, 74.8, 66.0, 11945, 2270],
+  'seoul-kr': [160, 68.2, 82.9, 75.3, 28649, 836],
+  'shanghai-cn': [238, 38.8, 66.8, 73.5, 13326, 884],
+  'los-angeles-us': [183, 81.5, 61.9, 45.9, 7755, 2534],
+  'chicago-us': [282, 76.0, 64.9, 34.5, 3889, 2407],
+  'san-francisco-us': [150, 97.6, 64.9, 39.4, 10707, 3636],
+  'miami-us': [197, 79.5, 63.0, 46.7, 6920, 2821],
+  'boston-us': [155, 86.2, 72.0, 60.3, 13210, 3416],
+  'sao-paulo-br': [112, 36.8, 60.3, 30.1, 2546, 641],
+  'milan-it': [219, 73.1, 70.3, 46.5, 10222, 1603],
+  'frankfurt-de': [288, 74.0, 78.2, 55.5, 7884, 1298],
+  'brussels-be': [178, 73.5, 73.6, 44.6, 4834, 1247],
+  'istanbul-tr': [316, 43.8, 70.1, 52.0, 3164, 1066],
+  'mumbai-in': [127, 26.3, 65.5, 55.9, 6675, 657],
+  'jakarta-id': [92, 29.8, 57.2, 47.2, 2808, 362],
+  'taipei-tw': [102, 54.7, 87.2, 83.5, 14207, 729],
+  'tel-aviv-il': [111, 91.4, 73.7, 74.1, 22393, 2206],
+  'munich-de': [230, 76.1, 79.5, 78.9, 12545, 1553],
+  'prague-cz': [165, 59.6, 74.8, 75.2, 9154, 1132],
+  'warsaw-pl': [150, 53.5, 58.4, 74.6, 5752, 1146],
+  'athens-gr': [178, 57.9, 58.5, 44.8, 3790, 674],
+  'rome-it': [249, 63.4, 65.0, 52.7, 8067, 1194],
+  'helsinki-fi': [134, 74.3, 80.3, 74.6, 10211, 1303],
+  'oslo-no': [151, 90.2, 77.7, 65.6, 11606, 1995],
+  'bogota-co': [101, 32.8, 66.0, 33.3, 2165, 547],
+  'panama-city-pa': [94, 47.0, 60.2, 52.9, 3128, 1320],
+  'doha-qa': [185, 49.7, 73.6, 84.5, 4475, 2087],
+  'bengaluru-in': [110, 21.9, 65.3, 46.0, 1794, 325],
+  'ho-chi-minh-city-vn': [88, 28.2, 62.6, 49.6, 4328, 552],
+}
+
 function toCity(r: Row): City {
   const gawc = GAWC_BY_ID[r.id] ?? r.gawc
   const tax = TAX_BY_CC[r.cc] ?? { income: r.income, capgains: r.capgains, regime: r.regime }
@@ -737,6 +803,14 @@ function toCity(r: Row): City {
       : typeof epi === 'number'
         ? { value: epiToScore(epi), source: 'ef-epi-2024', conf: 'high' as Confidence, note: undefined as string | undefined }
         : { value: r.english, source: 'bellwether-rubric', conf: 'low' as Confidence, note: 'EF EPI score unavailable; curated estimate.' }
+
+  const d = CITY_DATA[r.id]
+  const dest = d?.[0] ?? r.dest
+  const col = d?.[1] ?? r.col
+  const health = d?.[2] ?? r.health
+  const safety = d?.[3] ?? r.safety
+  const buy = d?.[4] ?? r.buy
+  const rent = d?.[5] ?? r.rent
 
   return {
     id: r.id,
@@ -760,11 +834,11 @@ function toCity(r: Row): City {
       },
       airport: {
         primaryIata: r.iata,
-        directDestinations: m(r.dest, 'openflights-2024', '2024', 'medium'),
+        directDestinations: m(dest, 'flightsfrom-2025', '2025', 'medium'),
       },
       realEstate: {
-        buyPricePerSqmUsd: m(r.buy, 'numbeo-2025', '2025', 'medium'),
-        rent1brCenterUsd: m(r.rent, 'numbeo-2025', '2025', 'medium'),
+        buyPricePerSqmUsd: m(buy, 'numbeo-2025', '2026', 'medium'),
+        rent1brCenterUsd: m(rent, 'numbeo-2025', '2026', 'medium'),
       },
       taxation: {
         topIncomeRatePct: m(tax.income, 'pwc-tax-2025', '2025', 'high'),
@@ -773,10 +847,10 @@ function toCity(r: Row): City {
         hasExpatRegime: m(r.expatRegime, 'pwc-tax-2025', '2025', 'medium'),
       },
       expat: m(r.expat, 'internations-2024', '2024', 'low', 'Country-level survey; city value estimated.'),
-      costOfLiving: m(r.col, 'numbeo-2025', '2025', 'medium'),
-      healthcare: m(r.health, 'numbeo-2025', '2025', 'medium'),
+      costOfLiving: m(col, 'numbeo-2025', '2026', 'medium'),
+      healthcare: m(health, 'numbeo-2025', '2026', 'medium'),
       safety: {
-        crimeSafetyIndex: m(r.safety, 'numbeo-2025', '2025', 'medium'),
+        crimeSafetyIndex: m(safety, 'numbeo-2025', '2026', 'medium'),
         politicalStability: m(stab, 'worldbank-wgi-2023', '2024', 'high'),
       },
       accessibility: {

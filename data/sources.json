@@ -35,6 +35,13 @@
     "accessedOn": "2026-06"
   },
   {
+    "id": "flightsfrom-2025",
+    "name": "FlightsFrom — nonstop destinations by airport",
+    "url": "https://www.flightsfrom.com/",
+    "publisher": "FlightsFrom",
+    "accessedOn": "2026-06"
+  },
+  {
     "id": "numbeo-2025",
     "name": "Numbeo Cost of Living, Property, Health Care & Crime Indices",
     "url": "https://www.numbeo.com/",

@@ -122,21 +122,29 @@ export function MethodologyPage() {
         </ul>
       </Section>
 
-      <Section title="What’s verified vs. estimated">
+      <Section title="How much to trust each number">
         <p>
-          Several factors are now sourced from authoritative datasets and carry{' '}
-          <strong className="text-ink">high confidence</strong>: city tier (GaWC 2024), taxation
-          (PwC Worldwide Tax Summaries), English proficiency (EF EPI 2024), and political stability
-          (World Bank WGI).
+          Every value carries a source dot — green (high), amber (medium), red (low) — and an as-of
+          date you can hover anywhere it appears. Broadly:
         </p>
-        <p>
-          Be more skeptical of the rest, which remain curated or crowd-sourced estimates:{' '}
-          <strong className="text-ink">climate projections</strong> (especially 2080),{' '}
-          <strong className="text-ink">expat friendliness</strong>,{' '}
-          <strong className="text-ink">visa/residency ease</strong>, and the Numbeo-based cost,
-          housing, healthcare and safety indices. Every number carries a source dot — green (high),
-          amber (medium), red (low) — and an as-of date you can hover anywhere it appears.
-        </p>
+        <ul className="space-y-1.5">
+          <li>
+            <strong className="text-ink">High confidence (authoritative):</strong> city tier (GaWC
+            2024), taxation (PwC Worldwide Tax Summaries), English proficiency (EF EPI 2024), and
+            political stability (World Bank WGI).
+          </li>
+          <li>
+            <strong className="text-ink">Medium confidence (sourced, but noisier):</strong> cost of
+            living, housing buy/rent, healthcare and safety (Numbeo crowd-sourced indices), and
+            airport connectivity (FlightsFrom). Real figures, but they drift and sample unevenly.
+          </li>
+          <li>
+            <strong className="text-ink">Low confidence (curated estimates):</strong>{' '}
+            climate projections — especially 2080 — plus expat-friendliness and visa/residency ease.
+            Treat these as directional, and use the climate-horizon sliders to decide how much the
+            long-range view counts.
+          </li>
+        </ul>
       </Section>
 
       <Section title="Sources">

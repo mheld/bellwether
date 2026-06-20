@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import { useCompare } from '../state/useCompare'
 
 const navLink = ({ isActive }: { isActive: boolean }) =>
   [
@@ -11,6 +12,7 @@ const navLink = ({ isActive }: { isActive: boolean }) =>
 
 export function Layout() {
   const { pathname } = useLocation()
+  const compareCount = useCompare((s) => s.ids.length)
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [pathname])
@@ -31,6 +33,11 @@ export function Layout() {
             </NavLink>
             <NavLink to="/compare" className={navLink}>
               Compare
+              {compareCount > 0 && (
+                <span className="nums ml-1.5 rounded-full bg-signal px-1.5 py-0.5 text-[10px] font-semibold text-paper-raised tabular-nums">
+                  {compareCount}
+                </span>
+              )}
             </NavLink>
             <NavLink to="/methodology" className={navLink}>
               Methodology

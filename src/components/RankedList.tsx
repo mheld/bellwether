@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import type { ScoredCity } from '../scoring/score'
 import { overallTrajectory } from '../scoring/climate'
 import { ClimateStripe } from './ClimateStripe'
+import { CompareToggle } from './CompareToggle'
 import { topStrengths } from '../ui/factors'
 import { formatScore } from '../ui/scale'
 
@@ -35,18 +36,17 @@ function CityRow({ scored, rank }: { scored: ScoredCity; rank: number }) {
   const strengths = topStrengths(factorScores, 3)
 
   return (
-    <li>
-      <Link
-        to={`/city/${city.id}`}
-        className="group grid grid-cols-[2rem_1fr_auto] items-center gap-4 px-1 py-4 transition-colors hover:bg-signal-soft/40 sm:px-3"
-      >
-        {/* rank */}
-        <span className="nums text-right text-lg font-medium text-ink-faint tabular-nums group-hover:text-signal">
-          {rank}
-        </span>
+    <li className="group relative grid grid-cols-[2rem_1fr_auto] items-center gap-4 px-1 py-4 transition-colors hover:bg-signal-soft/40 sm:px-3">
+      {/* stretched link covers the row for navigation; sits behind interactive controls */}
+      <Link to={`/city/${city.id}`} className="absolute inset-0 z-0" aria-label={`${city.name} details`} />
 
-        {/* identity + meta */}
-        <div className="min-w-0">
+      {/* rank */}
+      <span className="nums text-right text-lg font-medium text-ink-faint tabular-nums group-hover:text-signal">
+        {rank}
+      </span>
+
+      {/* identity + meta */}
+      <div className="min-w-0">
           <div className="flex items-baseline gap-2">
             <h3 className="truncate font-display text-base font-semibold text-ink">{city.name}</h3>
             <span className="truncate text-xs text-ink-faint">{city.country}</span>
@@ -68,27 +68,27 @@ function CityRow({ scored, rank }: { scored: ScoredCity; rank: number }) {
           </div>
         </div>
 
-        {/* score + climate arc */}
-        <div className="flex items-center gap-4">
-          <div className="hidden w-24 sm:block">
-            <ClimateStripe trajectory={traj} height={8} />
-            <p className="mt-1 text-right text-[10px] uppercase tracking-wide text-ink-faint">
-              climate arc
-            </p>
+      {/* score + climate arc + compare */}
+      <div className="flex items-center gap-3">
+        <div className="hidden w-24 sm:block">
+          <ClimateStripe trajectory={traj} height={8} />
+          <p className="mt-1 text-right text-[10px] uppercase tracking-wide text-ink-faint">
+            climate arc
+          </p>
+        </div>
+        <div className="w-12 text-right">
+          <div className="nums font-mono text-2xl font-medium leading-none text-ink tabular-nums">
+            {formatScore(score)}
           </div>
-          <div className="w-14 text-right">
-            <div className="nums font-mono text-2xl font-medium leading-none text-ink tabular-nums">
-              {formatScore(score)}
-            </div>
-            <div className="mt-1 h-1 w-full overflow-hidden rounded-full bg-line">
-              <div
-                className="h-full rounded-full bg-signal transition-[width] duration-300"
-                style={{ width: `${score}%` }}
-              />
-            </div>
+          <div className="mt-1 h-1 w-full overflow-hidden rounded-full bg-line">
+            <div
+              className="h-full rounded-full bg-signal transition-[width] duration-300"
+              style={{ width: `${score}%` }}
+            />
           </div>
         </div>
-      </Link>
+        <CompareToggle cityId={city.id} className="relative z-10" />
+      </div>
     </li>
   )
 }

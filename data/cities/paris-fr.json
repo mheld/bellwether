@@ -26,19 +26,19 @@
       "hazards": {
         "heat": {
           "now": {
-            "value": 40,
+            "value": 35,
             "source": "worldbank-cckp",
             "asOf": "2024",
             "confidence": "medium"
           },
           "y2050": {
-            "value": 54,
+            "value": 55,
             "source": "worldbank-cckp",
             "asOf": "2050",
             "confidence": "low"
           },
           "y2080": {
-            "value": 64,
+            "value": 72,
             "source": "worldbank-cckp",
             "asOf": "2080",
             "confidence": "low"
@@ -53,7 +53,28 @@
             "confidence": "medium"
           },
           "y2050": {
-            "value": 46,
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 72,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "flood": {
+          "now": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 55,
             "source": "wri-aqueduct-40",
             "asOf": "2050",
             "confidence": "low"
@@ -66,42 +87,21 @@
           },
           "scenario": "SSP2-4.5"
         },
-        "flood": {
-          "now": {
-            "value": 30,
-            "source": "wri-aqueduct-40",
-            "asOf": "2024",
-            "confidence": "medium"
-          },
-          "y2050": {
-            "value": 38,
-            "source": "wri-aqueduct-40",
-            "asOf": "2050",
-            "confidence": "low"
-          },
-          "y2080": {
-            "value": 46,
-            "source": "wri-aqueduct-40",
-            "asOf": "2080",
-            "confidence": "low"
-          },
-          "scenario": "SSP2-4.5"
-        },
         "wildfire": {
           "now": {
-            "value": 10,
+            "value": 15,
             "source": "bellwether-rubric",
             "asOf": "2024",
             "confidence": "medium"
           },
           "y2050": {
-            "value": 16,
+            "value": 15,
             "source": "bellwether-rubric",
             "asOf": "2050",
             "confidence": "low"
           },
           "y2080": {
-            "value": 22,
+            "value": 35,
             "source": "bellwether-rubric",
             "asOf": "2080",
             "confidence": "low"
@@ -116,13 +116,13 @@
             "confidence": "medium"
           },
           "y2050": {
-            "value": 45,
+            "value": 55,
             "source": "wri-aqueduct-40",
             "asOf": "2050",
             "confidence": "low"
           },
           "y2080": {
-            "value": 54,
+            "value": 55,
             "source": "wri-aqueduct-40",
             "asOf": "2080",
             "confidence": "low"

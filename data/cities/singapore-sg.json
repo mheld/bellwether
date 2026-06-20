@@ -26,19 +26,19 @@
       "hazards": {
         "heat": {
           "now": {
-            "value": 60,
+            "value": 72,
             "source": "worldbank-cckp",
             "asOf": "2024",
             "confidence": "medium"
           },
           "y2050": {
-            "value": 72,
+            "value": 90,
             "source": "worldbank-cckp",
             "asOf": "2050",
             "confidence": "low"
           },
           "y2080": {
-            "value": 80,
+            "value": 90,
             "source": "worldbank-cckp",
             "asOf": "2080",
             "confidence": "low"
@@ -47,28 +47,7 @@
         },
         "drought": {
           "now": {
-            "value": 25,
-            "source": "wri-aqueduct-40",
-            "asOf": "2024",
-            "confidence": "medium"
-          },
-          "y2050": {
-            "value": 30,
-            "source": "wri-aqueduct-40",
-            "asOf": "2050",
-            "confidence": "low"
-          },
-          "y2080": {
             "value": 35,
-            "source": "wri-aqueduct-40",
-            "asOf": "2080",
-            "confidence": "low"
-          },
-          "scenario": "SSP2-4.5"
-        },
-        "flood": {
-          "now": {
-            "value": 45,
             "source": "wri-aqueduct-40",
             "asOf": "2024",
             "confidence": "medium"
@@ -80,7 +59,28 @@
             "confidence": "low"
           },
           "y2080": {
-            "value": 63,
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "flood": {
+          "now": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 72,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 72,
             "source": "wri-aqueduct-40",
             "asOf": "2080",
             "confidence": "low"
@@ -89,19 +89,19 @@
         },
         "wildfire": {
           "now": {
-            "value": 5,
+            "value": 15,
             "source": "bellwether-rubric",
             "asOf": "2024",
             "confidence": "medium"
           },
           "y2050": {
-            "value": 8,
+            "value": 15,
             "source": "bellwether-rubric",
             "asOf": "2050",
             "confidence": "low"
           },
           "y2080": {
-            "value": 10,
+            "value": 15,
             "source": "bellwether-rubric",
             "asOf": "2080",
             "confidence": "low"
@@ -110,19 +110,19 @@
         },
         "waterStress": {
           "now": {
-            "value": 45,
+            "value": 55,
             "source": "wri-aqueduct-40",
             "asOf": "2024",
             "confidence": "medium"
           },
           "y2050": {
-            "value": 52,
+            "value": 55,
             "source": "wri-aqueduct-40",
             "asOf": "2050",
             "confidence": "low"
           },
           "y2080": {
-            "value": 58,
+            "value": 72,
             "source": "wri-aqueduct-40",
             "asOf": "2080",
             "confidence": "low"

@@ -32,13 +32,13 @@
             "confidence": "medium"
           },
           "y2050": {
-            "value": 46,
+            "value": 55,
             "source": "worldbank-cckp",
             "asOf": "2050",
             "confidence": "low"
           },
           "y2080": {
-            "value": 55,
+            "value": 72,
             "source": "worldbank-cckp",
             "asOf": "2080",
             "confidence": "low"
@@ -53,13 +53,13 @@
             "confidence": "medium"
           },
           "y2050": {
-            "value": 44,
+            "value": 55,
             "source": "wri-aqueduct-40",
             "asOf": "2050",
             "confidence": "low"
           },
           "y2080": {
-            "value": 53,
+            "value": 72,
             "source": "wri-aqueduct-40",
             "asOf": "2080",
             "confidence": "low"
@@ -68,19 +68,19 @@
         },
         "flood": {
           "now": {
-            "value": 35,
+            "value": 55,
             "source": "wri-aqueduct-40",
             "asOf": "2024",
             "confidence": "medium"
           },
           "y2050": {
-            "value": 44,
+            "value": 72,
             "source": "wri-aqueduct-40",
             "asOf": "2050",
             "confidence": "low"
           },
           "y2080": {
-            "value": 52,
+            "value": 72,
             "source": "wri-aqueduct-40",
             "asOf": "2080",
             "confidence": "low"
@@ -89,19 +89,19 @@
         },
         "wildfire": {
           "now": {
-            "value": 12,
+            "value": 15,
             "source": "bellwether-rubric",
             "asOf": "2024",
             "confidence": "medium"
           },
           "y2050": {
-            "value": 18,
+            "value": 15,
             "source": "bellwether-rubric",
             "asOf": "2050",
             "confidence": "low"
           },
           "y2080": {
-            "value": 24,
+            "value": 35,
             "source": "bellwether-rubric",
             "asOf": "2080",
             "confidence": "low"
@@ -110,19 +110,19 @@
         },
         "waterStress": {
           "now": {
-            "value": 25,
+            "value": 35,
             "source": "wri-aqueduct-40",
             "asOf": "2024",
             "confidence": "medium"
           },
           "y2050": {
-            "value": 32,
+            "value": 55,
             "source": "wri-aqueduct-40",
             "asOf": "2050",
             "confidence": "low"
           },
           "y2080": {
-            "value": 40,
+            "value": 55,
             "source": "wri-aqueduct-40",
             "asOf": "2080",
             "confidence": "low"

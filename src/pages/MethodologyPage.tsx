@@ -139,10 +139,12 @@ export function MethodologyPage() {
             airport connectivity (FlightsFrom). Real figures, but they drift and sample unevenly.
           </li>
           <li>
-            <strong className="text-ink">Low confidence (curated estimates):</strong>{' '}
-            climate projections — especially 2080 — plus expat-friendliness and visa/residency ease.
-            Treat these as directional, and use the climate-horizon sliders to decide how much the
-            long-range view counts.
+            <strong className="text-ink">Low confidence (grounded estimates):</strong>{' '}
+            climate hazards are assigned as risk <em>bands</em> (low → severe) per horizon, grounded
+            in the World Bank CCKP, IPCC AR6 and WRI Aqueduct — defensible directionally, but future
+            horizons (especially 2080) are genuinely uncertain, so use the climate-horizon sliders to
+            decide how much they count. Expat-friendliness and visa/residency ease remain curated
+            estimates.
           </li>
         </ul>
       </Section>

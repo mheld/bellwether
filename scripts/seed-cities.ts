@@ -792,8 +792,84 @@ const CITY_DATA: Record<string, [number, number, number, number, number, number]
   'ho-chi-minh-city-vn': [88, 28.2, 62.6, 49.6, 4328, 552],
 }
 
+/** Climate hazard risk bands per city: [heat, drought, flood, wildfire, water],
+ * each a 3-char string of now/2050/2080 bands. L/M/E/H/S → Low…Severe.
+ * Sourced from CCKP+IPCC (heat), WRI Aqueduct (water/drought/flood), and
+ * sea-level/fire-weather assessments. Banded to avoid false precision. */
+const BAND: Record<string, number> = { L: 15, M: 35, E: 55, H: 72, S: 90 }
+const bands3 = (s: string): Triple => [BAND[s[0]], BAND[s[1]], BAND[s[2]]]
+
+const CLIMATE_BANDS: Record<string, [string, string, string, string, string]> = {
+  'lisbon-pt': ['MEH', 'EHS', 'MEE', 'EHH', 'EHH'],
+  'singapore-sg': ['HSS', 'MEE', 'EHH', 'LLL', 'EEH'],
+  'toronto-ca': ['LME', 'LLM', 'LMM', 'LLM', 'LLM'],
+  'madrid-es': ['EHS', 'HSS', 'LMM', 'EHS', 'HHS'],
+  'tokyo-jp': ['EHH', 'MME', 'EHH', 'LLL', 'MME'],
+  'dubai-ae': ['SSS', 'SSS', 'MEE', 'LLL', 'SSS'],
+  'mexico-city-mx': ['MEE', 'HSS', 'MME', 'LMM', 'HSS'],
+  'berlin-de': ['LME', 'MEH', 'LMM', 'LLM', 'MEE'],
+  'melbourne-au': ['MEH', 'HHS', 'MEE', 'HHS', 'EHH'],
+  'austin-us': ['HHS', 'EHS', 'MEE', 'MEH', 'EHH'],
+  'zurich-ch': ['LME', 'LMM', 'LMM', 'LLL', 'LMM'],
+  'montevideo-uy': ['MEE', 'MEE', 'MEE', 'LLM', 'MME'],
+  'london-uk': ['LME', 'MEH', 'MEE', 'LLL', 'MEE'],
+  'new-york-us': ['MEH', 'LME', 'EHS', 'LLL', 'MME'],
+  'paris-fr': ['MEH', 'MEH', 'MEE', 'LLM', 'MEE'],
+  'amsterdam-nl': ['LME', 'LMM', 'HSS', 'LLL', 'LMM'],
+  'barcelona-es': ['MEH', 'HSS', 'MEE', 'EHH', 'HHS'],
+  'vienna-at': ['MEH', 'MEE', 'LMM', 'LLM', 'MME'],
+  'copenhagen-dk': ['LLM', 'LMM', 'MEH', 'LLL', 'LMM'],
+  'stockholm-se': ['LLM', 'LMM', 'LMM', 'LLM', 'LLM'],
+  'vancouver-ca': ['LME', 'LME', 'MEE', 'EHH', 'LMM'],
+  'buenos-aires-ar': ['MEH', 'MEH', 'EHH', 'LLM', 'MEE'],
+  'santiago-cl': ['MEH', 'SSS', 'LMM', 'EHS', 'HSS'],
+  'auckland-nz': ['LMM', 'MEE', 'MEE', 'LMM', 'MME'],
+  'bangkok-th': ['SSS', 'MEH', 'HSS', 'LLL', 'EHH'],
+  'kuala-lumpur-my': ['HSS', 'MME', 'EHH', 'LLL', 'MEE'],
+  'cape-town-za': ['MEH', 'SSS', 'MEE', 'EHS', 'HSS'],
+  'tbilisi-ge': ['MEH', 'MEE', 'MME', 'MEE', 'MEE'],
+  'medellin-co': ['MEE', 'LME', 'MEE', 'LLM', 'LMM'],
+  'dublin-ie': ['LLM', 'LMM', 'MEE', 'LLL', 'LMM'],
+  'hong-kong-hk': ['HSS', 'MEE', 'EHS', 'LLL', 'EEH'],
+  'sydney-au': ['MEH', 'HHS', 'MEE', 'HHS', 'EHH'],
+  'seoul-kr': ['EHH', 'MEE', 'EHH', 'LLL', 'MEE'],
+  'shanghai-cn': ['EHS', 'MEE', 'HSS', 'LLL', 'EEH'],
+  'los-angeles-us': ['MEH', 'HSS', 'MEH', 'HSS', 'HSS'],
+  'chicago-us': ['MEH', 'LMM', 'MME', 'LLM', 'LLM'],
+  'san-francisco-us': ['LME', 'HHS', 'EHH', 'HHS', 'HHS'],
+  'miami-us': ['HSS', 'MEH', 'HSS', 'LLL', 'MEE'],
+  'boston-us': ['MEH', 'LME', 'EHH', 'LLL', 'MME'],
+  'sao-paulo-br': ['MEH', 'EHH', 'MEE', 'LMM', 'EHH'],
+  'milan-it': ['MEH', 'MEH', 'MEE', 'LME', 'MEH'],
+  'frankfurt-de': ['LME', 'MEH', 'MEE', 'LLM', 'MEE'],
+  'brussels-be': ['LME', 'MEE', 'MEE', 'LLL', 'MME'],
+  'istanbul-tr': ['MEH', 'HSS', 'MEE', 'MEH', 'HHS'],
+  'mumbai-in': ['HSS', 'EHH', 'HSS', 'LLL', 'EHH'],
+  'jakarta-id': ['HSS', 'EHH', 'SSS', 'LLL', 'HHS'],
+  'taipei-tw': ['HSS', 'MEE', 'EHS', 'LLL', 'MEE'],
+  'tel-aviv-il': ['EHS', 'SSS', 'MEE', 'MEH', 'SSS'],
+  'munich-de': ['LME', 'MEE', 'LMM', 'LLM', 'MME'],
+  'prague-cz': ['LME', 'MEH', 'MME', 'LLM', 'MEE'],
+  'warsaw-pl': ['LME', 'MEH', 'LMM', 'LLM', 'MEE'],
+  'athens-gr': ['EHS', 'HSS', 'MEE', 'HSS', 'HSS'],
+  'rome-it': ['MEH', 'EHS', 'MEE', 'EHS', 'EHH'],
+  'helsinki-fi': ['LLM', 'LLM', 'LMM', 'LLL', 'LLM'],
+  'oslo-no': ['LLM', 'LLM', 'LMM', 'LLL', 'LLM'],
+  'bogota-co': ['LMM', 'MEE', 'MEE', 'LLL', 'MEE'],
+  'panama-city-pa': ['HSS', 'MEH', 'EHH', 'LLL', 'MEE'],
+  'doha-qa': ['SSS', 'SSS', 'MEE', 'LLL', 'SSS'],
+  'bengaluru-in': ['EHH', 'HSS', 'MEE', 'LMM', 'HSS'],
+  'ho-chi-minh-city-vn': ['SSS', 'MEH', 'SSS', 'LLL', 'EHH'],
+}
+
 function toCity(r: Row): City {
   const gawc = GAWC_BY_ID[r.id] ?? r.gawc
+  const cb = CLIMATE_BANDS[r.id]
+  const ht = cb ? bands3(cb[0]) : r.heat
+  const dr = cb ? bands3(cb[1]) : r.drought
+  const fl = cb ? bands3(cb[2]) : r.flood
+  const wf = cb ? bands3(cb[3]) : r.wildfire
+  const wt = cb ? bands3(cb[4]) : r.water
   const tax = TAX_BY_CC[r.cc] ?? { income: r.income, capgains: r.capgains, regime: r.regime }
   const stab = WGI_BY_CC[r.cc] ?? r.stability
   const epi = EPI_BY_CC[r.cc]
@@ -825,11 +901,11 @@ function toCity(r: Row): City {
       importance: m(gawc, 'gawc-2024', '2024', 'high'),
       climate: {
         hazards: {
-          heat: hazard(HAZARD_SOURCE.heat, r.heat),
-          drought: hazard(HAZARD_SOURCE.drought, r.drought),
-          flood: hazard(HAZARD_SOURCE.flood, r.flood),
-          wildfire: hazard(HAZARD_SOURCE.wildfire, r.wildfire),
-          waterStress: hazard(HAZARD_SOURCE.waterStress, r.water),
+          heat: hazard(HAZARD_SOURCE.heat, ht),
+          drought: hazard(HAZARD_SOURCE.drought, dr),
+          flood: hazard(HAZARD_SOURCE.flood, fl),
+          wildfire: hazard(HAZARD_SOURCE.wildfire, wf),
+          waterStress: hazard(HAZARD_SOURCE.waterStress, wt),
         },
       },
       airport: {

@@ -1,8 +1,9 @@
 import { FACTORS, HORIZONS, type FactorKey } from '../data/schema'
 import { useWeights } from '../state/useWeights'
+import { PRESETS } from '../state/presets'
 
 export function WeightsPanel() {
-  const { factors, horizon, setFactor, setHorizon, reset } = useWeights()
+  const { factors, horizon, setFactor, setHorizon, setAll, reset } = useWeights()
 
   return (
     <div className="space-y-5">
@@ -12,7 +13,7 @@ export function WeightsPanel() {
             What matters to you
           </h2>
           <p className="mt-0.5 text-xs text-ink-faint">
-            Slide to weight each factor. The ranking updates live.
+            Start from a preset, then fine-tune. The ranking updates live.
           </p>
         </div>
         <button
@@ -21,6 +22,21 @@ export function WeightsPanel() {
         >
           Reset
         </button>
+      </div>
+
+      <div className="flex flex-wrap gap-1.5">
+        {PRESETS.map((preset) => (
+          <button
+            key={preset.id}
+            onClick={() =>
+              setAll({ factors: preset.factors, horizon: preset.horizon, hazard: preset.hazard })
+            }
+            title={preset.blurb}
+            className="rounded-full px-2.5 py-1 text-xs text-ink-soft ring-1 ring-line transition-colors hover:bg-signal-soft hover:text-ink hover:ring-signal-soft"
+          >
+            {preset.label}
+          </button>
+        ))}
       </div>
 
       <div className="space-y-4">

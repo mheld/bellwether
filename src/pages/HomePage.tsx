@@ -15,6 +15,7 @@ export function HomePage() {
   const [regions, setRegions] = useState<Set<string>>(new Set())
   const PAGE = 25
   const [visible, setVisible] = useState(PAGE)
+  const [panelOpen, setPanelOpen] = useState(false)
 
   const rankById = useMemo(
     () => new Map(ranked.map((sc, i) => [sc.city.id, i + 1])),
@@ -68,9 +69,19 @@ export function HomePage() {
       {/* Workspace */}
       <div className="grid gap-8 py-8 lg:grid-cols-[18rem_1fr] lg:gap-12">
         <aside className="lg:sticky lg:top-20 lg:h-fit lg:max-h-[calc(100dvh-6rem)] lg:overflow-y-auto lg:pr-1">
-          <WeightsPanel />
-          <div className="mt-5 border-t border-line pt-4">
-            <ShareButton />
+          <button
+            onClick={() => setPanelOpen((o) => !o)}
+            className="mb-3 flex w-full items-center justify-between rounded-md border border-line-strong px-3 py-2 text-sm font-medium text-ink lg:hidden"
+            aria-expanded={panelOpen}
+          >
+            <span>{panelOpen ? 'Hide weights' : 'Adjust weights & presets'}</span>
+            <span className="text-ink-faint">{panelOpen ? '▲' : '▼'}</span>
+          </button>
+          <div className={panelOpen ? 'block' : 'hidden lg:block'}>
+            <WeightsPanel />
+            <div className="mt-5 border-t border-line pt-4">
+              <ShareButton />
+            </div>
           </div>
         </aside>
 

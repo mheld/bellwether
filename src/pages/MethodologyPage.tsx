@@ -135,16 +135,17 @@ export function MethodologyPage() {
           </li>
           <li>
             <strong className="text-ink">Medium confidence (sourced, but noisier):</strong> cost of
-            living, housing buy/rent, healthcare and safety (Numbeo crowd-sourced indices), and
-            airport connectivity (FlightsFrom). Real figures, but they drift and sample unevenly.
+            living, housing buy/rent, healthcare and safety (Numbeo), airport connectivity
+            (FlightsFrom), expat-friendliness (InterNations Expat City Ranking), and visa/residency
+            ease (a curated rubric of nomad/retirement/investor and PR routes). Real signals, but
+            they drift, sample unevenly, or involve judgment.
           </li>
           <li>
             <strong className="text-ink">Low confidence (grounded estimates):</strong>{' '}
             climate hazards are assigned as risk <em>bands</em> (low → severe) per horizon, grounded
-            in the World Bank CCKP, IPCC AR6 and WRI Aqueduct — defensible directionally, but future
-            horizons (especially 2080) are genuinely uncertain, so use the climate-horizon sliders to
-            decide how much they count. Expat-friendliness and visa/residency ease remain curated
-            estimates.
+            in the World Bank CCKP, IPCC AR6 and WRI Aqueduct. Today’s bands are reasonably solid;
+            the 2050 and especially 2080 projections are genuinely uncertain, so use the
+            climate-horizon sliders to decide how much they count.
           </li>
         </ul>
       </Section>

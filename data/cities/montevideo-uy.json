@@ -185,7 +185,7 @@
       "source": "internations-2024",
       "asOf": "2024",
       "confidence": "low",
-      "note": "Country-level survey; city value estimated."
+      "note": "Estimated from country reputation; city not in InterNations ranking."
     },
     "costOfLiving": {
       "value": 57.2,
@@ -224,8 +224,8 @@
         "value": 80,
         "source": "bellwether-rubric",
         "asOf": "2026",
-        "confidence": "low",
-        "note": "Curated residency-pathway estimate."
+        "confidence": "medium",
+        "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
       }
     }
   }

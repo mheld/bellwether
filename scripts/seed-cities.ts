@@ -862,8 +862,42 @@ const CLIMATE_BANDS: Record<string, [string, string, string, string, string]> = 
   'ho-chi-minh-city-vn': ['SSS', 'MEH', 'SSS', 'LLL', 'EHH'],
 }
 
+/** Expat-friendliness 0-100 (InterNations Expat City Ranking 2024 where covered). */
+const EXPAT_BY_ID: Record<string, number> = {
+  'lisbon-pt': 62, 'singapore-sg': 60, 'toronto-ca': 70, 'madrid-es': 78, 'tokyo-jp': 48,
+  'dubai-ae': 65, 'mexico-city-mx': 76, 'berlin-de': 42, 'melbourne-au': 72, 'austin-us': 74,
+  'zurich-ch': 40, 'montevideo-uy': 70, 'london-uk': 55, 'new-york-us': 58, 'paris-fr': 45,
+  'amsterdam-nl': 52, 'barcelona-es': 70, 'vienna-at': 50, 'copenhagen-dk': 44, 'stockholm-se': 38,
+  'vancouver-ca': 68, 'buenos-aires-ar': 72, 'santiago-cl': 58, 'auckland-nz': 66, 'bangkok-th': 74,
+  'kuala-lumpur-my': 80, 'cape-town-za': 68, 'tbilisi-ge': 70, 'medellin-co': 78, 'dublin-ie': 56,
+  'hong-kong-hk': 50, 'sydney-au': 70, 'seoul-kr': 50, 'shanghai-cn': 56, 'los-angeles-us': 64,
+  'chicago-us': 66, 'san-francisco-us': 62, 'miami-us': 70, 'boston-us': 66, 'sao-paulo-br': 70,
+  'milan-it': 54, 'frankfurt-de': 46, 'brussels-be': 52, 'istanbul-tr': 58, 'mumbai-in': 60,
+  'jakarta-id': 64, 'taipei-tw': 78, 'tel-aviv-il': 50, 'munich-de': 48, 'prague-cz': 54,
+  'warsaw-pl': 62, 'athens-gr': 60, 'rome-it': 52, 'helsinki-fi': 46, 'oslo-no': 44,
+  'bogota-co': 72, 'panama-city-pa': 76, 'doha-qa': 58, 'bengaluru-in': 62, 'ho-chi-minh-city-vn': 70,
+}
+/** Cities estimated from country reputation (not in the InterNations city ranking). */
+const EXPAT_EST = new Set<string>([
+  'austin-us', 'montevideo-uy', 'new-york-us', 'vancouver-ca', 'auckland-nz', 'tbilisi-ge',
+  'medellin-co', 'los-angeles-us', 'chicago-us', 'san-francisco-us', 'miami-us', 'boston-us',
+  'mumbai-in', 'tel-aviv-il', 'oslo-no', 'bengaluru-in', 'ho-chi-minh-city-vn',
+])
+
+/** Visa/residency ease 0-100 rubric (digital-nomad, retirement, investor & PR routes). */
+const VISA_BY_CC: Record<string, number> = {
+  PT: 92, SG: 28, CA: 58, ES: 84, JP: 45, AE: 62, MX: 85, DE: 60, AU: 48, US: 18, CH: 22,
+  UY: 80, GB: 38, FR: 66, NL: 55, AT: 48, DK: 40, SE: 45, AR: 78, CL: 70, NZ: 52, TH: 72,
+  MY: 68, ZA: 60, GE: 95, CO: 86, IE: 50, HK: 42, KR: 50, CN: 20, BR: 72, IT: 70, BE: 52,
+  TR: 74, IN: 40, ID: 66, TW: 58, IL: 45, CZ: 60, PL: 58, GR: 82, FI: 50, NO: 42, PA: 88,
+  QA: 35, VN: 50,
+}
+
 function toCity(r: Row): City {
   const gawc = GAWC_BY_ID[r.id] ?? r.gawc
+  const expatVal = EXPAT_BY_ID[r.id] ?? r.expat
+  const expatEst = EXPAT_EST.has(r.id)
+  const visaVal = VISA_BY_CC[r.cc] ?? r.visa
   const cb = CLIMATE_BANDS[r.id]
   const ht = cb ? bands3(cb[0]) : r.heat
   const dr = cb ? bands3(cb[1]) : r.drought
@@ -922,7 +956,13 @@ function toCity(r: Row): City {
         regime: m(tax.regime, 'pwc-tax-2025', '2025', 'high'),
         hasExpatRegime: m(r.expatRegime, 'pwc-tax-2025', '2025', 'medium'),
       },
-      expat: m(r.expat, 'internations-2024', '2024', 'low', 'Country-level survey; city value estimated.'),
+      expat: m(
+        expatVal,
+        'internations-2024',
+        '2024',
+        expatEst ? 'low' : 'medium',
+        expatEst ? 'Estimated from country reputation; city not in InterNations ranking.' : undefined,
+      ),
       costOfLiving: m(col, 'numbeo-2025', '2026', 'medium'),
       healthcare: m(health, 'numbeo-2025', '2026', 'medium'),
       safety: {
@@ -931,7 +971,7 @@ function toCity(r: Row): City {
       },
       accessibility: {
         englishProficiency: m(eng.value, eng.source, '2024', eng.conf, eng.note),
-        visaEaseIndex: m(r.visa, 'bellwether-rubric', '2026', 'low', 'Curated residency-pathway estimate.'),
+        visaEaseIndex: m(visaVal, 'bellwether-rubric', '2026', 'medium', 'Curated residency-pathway rubric (nomad/retirement/investor & PR routes).'),
       },
     },
   }

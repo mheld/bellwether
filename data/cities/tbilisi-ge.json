@@ -181,11 +181,11 @@
       }
     },
     "expat": {
-      "value": 68,
+      "value": 70,
       "source": "internations-2024",
       "asOf": "2024",
       "confidence": "low",
-      "note": "Country-level survey; city value estimated."
+      "note": "Estimated from country reputation; city not in InterNations ranking."
     },
     "costOfLiving": {
       "value": 36.6,
@@ -221,11 +221,11 @@
         "confidence": "high"
       },
       "visaEaseIndex": {
-        "value": 90,
+        "value": 95,
         "source": "bellwether-rubric",
         "asOf": "2026",
-        "confidence": "low",
-        "note": "Curated residency-pathway estimate."
+        "confidence": "medium",
+        "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
       }
     }
   }

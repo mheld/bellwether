@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "baselineYear": 2025,
-  "generatedAt": "2026-06-20T17:01:33.553Z",
+  "generatedAt": "2026-06-20T17:05:05.172Z",
   "sources": [
     {
       "id": "gawc-2024",
@@ -279,11 +279,10 @@
           }
         },
         "expat": {
-          "value": 68,
+          "value": 52,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 82.6,
@@ -322,8 +321,8 @@
             "value": 55,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -511,11 +510,10 @@
           }
         },
         "expat": {
-          "value": 66,
+          "value": 60,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 57.9,
@@ -551,11 +549,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 65,
+            "value": 82,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -743,11 +741,11 @@
           }
         },
         "expat": {
-          "value": 72,
+          "value": 66,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 62.5,
@@ -784,11 +782,11 @@
             "note": "Majority-English-speaking country."
           },
           "visaEaseIndex": {
-            "value": 60,
+            "value": 52,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -976,11 +974,11 @@
           }
         },
         "expat": {
-          "value": 68,
+          "value": 74,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 66.4,
@@ -1017,11 +1015,11 @@
             "note": "Majority-English-speaking country."
           },
           "visaEaseIndex": {
-            "value": 35,
+            "value": 18,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -1209,11 +1207,10 @@
           }
         },
         "expat": {
-          "value": 60,
+          "value": 74,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 41.4,
@@ -1249,11 +1246,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 60,
+            "value": 72,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -1441,11 +1438,10 @@
           }
         },
         "expat": {
-          "value": 78,
+          "value": 70,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 59.2,
@@ -1481,11 +1477,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 72,
+            "value": 84,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -1673,11 +1669,11 @@
           }
         },
         "expat": {
-          "value": 52,
+          "value": 62,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 21.9,
@@ -1713,11 +1709,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 45,
+            "value": 40,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -1905,11 +1901,10 @@
           }
         },
         "expat": {
-          "value": 58,
+          "value": 42,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 70,
@@ -1945,11 +1940,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 65,
+            "value": 60,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -2137,11 +2132,10 @@
           }
         },
         "expat": {
-          "value": 62,
+          "value": 72,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 32.8,
@@ -2177,11 +2171,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 70,
+            "value": 86,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -2369,11 +2363,11 @@
           }
         },
         "expat": {
-          "value": 60,
+          "value": 66,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 86.2,
@@ -2410,11 +2404,11 @@
             "note": "Majority-English-speaking country."
           },
           "visaEaseIndex": {
-            "value": 35,
+            "value": 18,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -2602,11 +2596,10 @@
           }
         },
         "expat": {
-          "value": 60,
+          "value": 52,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 73.5,
@@ -2642,11 +2635,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 55,
+            "value": 52,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -2834,11 +2827,10 @@
           }
         },
         "expat": {
-          "value": 70,
+          "value": 72,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 48.8,
@@ -2874,11 +2866,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 70,
+            "value": 78,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -3069,8 +3061,7 @@
           "value": 68,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 39.6,
@@ -3106,11 +3097,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 58,
+            "value": 60,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -3298,11 +3289,11 @@
           }
         },
         "expat": {
-          "value": 60,
+          "value": 66,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 76,
@@ -3339,11 +3330,11 @@
             "note": "Majority-English-speaking country."
           },
           "visaEaseIndex": {
-            "value": 35,
+            "value": 18,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -3531,11 +3522,10 @@
           }
         },
         "expat": {
-          "value": 60,
+          "value": 44,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 85.7,
@@ -3571,11 +3561,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 50,
+            "value": 40,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -3763,11 +3753,10 @@
           }
         },
         "expat": {
-          "value": 60,
+          "value": 58,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 49.7,
@@ -3803,11 +3792,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 65,
+            "value": 35,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -3998,8 +3987,7 @@
           "value": 65,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 61.8,
@@ -4035,11 +4023,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 75,
+            "value": 62,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -4227,11 +4215,10 @@
           }
         },
         "expat": {
-          "value": 60,
+          "value": 56,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 76.7,
@@ -4271,8 +4258,8 @@
             "value": 50,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -4460,11 +4447,10 @@
           }
         },
         "expat": {
-          "value": 60,
+          "value": 46,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 74,
@@ -4500,11 +4486,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 55,
+            "value": 60,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -4692,11 +4678,10 @@
           }
         },
         "expat": {
-          "value": 56,
+          "value": 46,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 74.3,
@@ -4735,8 +4720,8 @@
             "value": 50,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -4924,11 +4909,11 @@
           }
         },
         "expat": {
-          "value": 58,
+          "value": 70,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 28.2,
@@ -4964,11 +4949,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 55,
+            "value": 50,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -5156,11 +5141,10 @@
           }
         },
         "expat": {
-          "value": 58,
+          "value": 50,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 75.2,
@@ -5196,11 +5180,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 45,
+            "value": 42,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -5391,8 +5375,7 @@
           "value": 58,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 43.8,
@@ -5428,11 +5411,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 60,
+            "value": 74,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -5620,11 +5603,10 @@
           }
         },
         "expat": {
-          "value": 52,
+          "value": 64,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 29.8,
@@ -5660,11 +5642,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 50,
+            "value": 66,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -5852,11 +5834,10 @@
           }
         },
         "expat": {
-          "value": 65,
+          "value": 80,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 37.4,
@@ -5892,11 +5873,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 62,
+            "value": 68,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -6084,11 +6065,10 @@
           }
         },
         "expat": {
-          "value": 78,
+          "value": 62,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 54.2,
@@ -6124,11 +6104,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 80,
+            "value": 92,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -6316,11 +6296,10 @@
           }
         },
         "expat": {
-          "value": 62,
+          "value": 55,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 87.5,
@@ -6357,11 +6336,11 @@
             "note": "Majority-English-speaking country."
           },
           "visaEaseIndex": {
-            "value": 45,
+            "value": 38,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -6549,11 +6528,11 @@
           }
         },
         "expat": {
-          "value": 62,
+          "value": 64,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 81.5,
@@ -6590,11 +6569,11 @@
             "note": "Majority-English-speaking country."
           },
           "visaEaseIndex": {
-            "value": 35,
+            "value": 18,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -6782,11 +6761,10 @@
           }
         },
         "expat": {
-          "value": 80,
+          "value": 78,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 60,
@@ -6822,11 +6800,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 72,
+            "value": 84,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -7014,11 +6992,11 @@
           }
         },
         "expat": {
-          "value": 72,
+          "value": 78,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 34.4,
@@ -7054,11 +7032,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 72,
+            "value": 86,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -7249,8 +7227,7 @@
           "value": 72,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 70.8,
@@ -7287,11 +7264,11 @@
             "note": "Majority-English-speaking country."
           },
           "visaEaseIndex": {
-            "value": 55,
+            "value": 48,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -7479,11 +7456,10 @@
           }
         },
         "expat": {
-          "value": 75,
+          "value": 76,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 45.9,
@@ -7519,11 +7495,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 78,
+            "value": 85,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -7711,11 +7687,11 @@
           }
         },
         "expat": {
-          "value": 65,
+          "value": 70,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 79.5,
@@ -7752,11 +7728,11 @@
             "note": "Majority-English-speaking country."
           },
           "visaEaseIndex": {
-            "value": 35,
+            "value": 18,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -7944,11 +7920,10 @@
           }
         },
         "expat": {
-          "value": 64,
+          "value": 54,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 73.1,
@@ -7984,11 +7959,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 60,
+            "value": 70,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -8180,7 +8155,7 @@
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 57.2,
@@ -8219,8 +8194,8 @@
             "value": 80,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -8408,11 +8383,11 @@
           }
         },
         "expat": {
-          "value": 48,
+          "value": 60,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 26.3,
@@ -8448,11 +8423,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 45,
+            "value": 40,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -8640,11 +8615,10 @@
           }
         },
         "expat": {
-          "value": 64,
+          "value": 48,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 76.1,
@@ -8680,11 +8654,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 55,
+            "value": 60,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -8872,11 +8846,11 @@
           }
         },
         "expat": {
-          "value": 60,
+          "value": 58,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 100,
@@ -8913,11 +8887,11 @@
             "note": "Majority-English-speaking country."
           },
           "visaEaseIndex": {
-            "value": 35,
+            "value": 18,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -9105,11 +9079,11 @@
           }
         },
         "expat": {
-          "value": 58,
+          "value": 44,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 90.2,
@@ -9145,11 +9119,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 50,
+            "value": 42,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -9337,11 +9311,10 @@
           }
         },
         "expat": {
-          "value": 68,
+          "value": 76,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 47,
@@ -9377,11 +9350,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 78,
+            "value": 88,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -9569,11 +9542,10 @@
           }
         },
         "expat": {
-          "value": 58,
+          "value": 45,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 78.6,
@@ -9609,11 +9581,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 55,
+            "value": 66,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -9801,11 +9773,10 @@
           }
         },
         "expat": {
-          "value": 64,
+          "value": 54,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 59.6,
@@ -9841,11 +9812,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 55,
+            "value": 60,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -10033,11 +10004,10 @@
           }
         },
         "expat": {
-          "value": 66,
+          "value": 52,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 63.4,
@@ -10073,11 +10043,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 60,
+            "value": 70,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -10265,11 +10235,11 @@
           }
         },
         "expat": {
-          "value": 60,
+          "value": 62,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 97.6,
@@ -10306,11 +10276,11 @@
             "note": "Majority-English-speaking country."
           },
           "visaEaseIndex": {
-            "value": 35,
+            "value": 18,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -10498,11 +10468,10 @@
           }
         },
         "expat": {
-          "value": 65,
+          "value": 58,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 41.9,
@@ -10538,11 +10507,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 65,
+            "value": 70,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -10730,11 +10699,10 @@
           }
         },
         "expat": {
-          "value": 62,
+          "value": 70,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 36.8,
@@ -10770,11 +10738,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 60,
+            "value": 72,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -10962,11 +10930,10 @@
           }
         },
         "expat": {
-          "value": 55,
+          "value": 50,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 68.2,
@@ -11002,11 +10969,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 45,
+            "value": 50,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -11194,11 +11161,10 @@
           }
         },
         "expat": {
-          "value": 50,
+          "value": 56,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 38.8,
@@ -11234,11 +11200,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 35,
+            "value": 20,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -11429,8 +11395,7 @@
           "value": 60,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 87.7,
@@ -11466,11 +11431,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 45,
+            "value": 28,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -11658,11 +11623,10 @@
           }
         },
         "expat": {
-          "value": 58,
+          "value": 38,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 78.6,
@@ -11698,11 +11662,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 50,
+            "value": 45,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -11893,8 +11857,7 @@
           "value": 70,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 75.1,
@@ -11931,11 +11894,11 @@
             "note": "Majority-English-speaking country."
           },
           "visaEaseIndex": {
-            "value": 55,
+            "value": 48,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -12123,11 +12086,10 @@
           }
         },
         "expat": {
-          "value": 65,
+          "value": 78,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 54.7,
@@ -12164,11 +12126,11 @@
             "note": "EF EPI score unavailable; curated estimate."
           },
           "visaEaseIndex": {
-            "value": 50,
+            "value": 58,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -12356,11 +12318,11 @@
           }
         },
         "expat": {
-          "value": 68,
+          "value": 70,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 36.6,
@@ -12396,11 +12358,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 90,
+            "value": 95,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -12588,11 +12550,11 @@
           }
         },
         "expat": {
-          "value": 55,
+          "value": 50,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 91.4,
@@ -12628,11 +12590,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 50,
+            "value": 45,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -12820,11 +12782,10 @@
           }
         },
         "expat": {
-          "value": 55,
+          "value": 48,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 54.2,
@@ -12860,11 +12821,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 40,
+            "value": 45,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -13055,8 +13016,7 @@
           "value": 70,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 67.5,
@@ -13093,11 +13053,11 @@
             "note": "Majority-English-speaking country."
           },
           "visaEaseIndex": {
-            "value": 70,
+            "value": 58,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -13285,11 +13245,11 @@
           }
         },
         "expat": {
-          "value": 70,
+          "value": 68,
           "source": "internations-2024",
           "asOf": "2024",
           "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "note": "Estimated from country reputation; city not in InterNations ranking."
         },
         "costOfLiving": {
           "value": 67.5,
@@ -13326,11 +13286,11 @@
             "note": "Majority-English-speaking country."
           },
           "visaEaseIndex": {
-            "value": 70,
+            "value": 58,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -13518,11 +13478,10 @@
           }
         },
         "expat": {
-          "value": 64,
+          "value": 50,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 73.9,
@@ -13558,11 +13517,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 50,
+            "value": 48,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -13750,11 +13709,10 @@
           }
         },
         "expat": {
-          "value": 60,
+          "value": 62,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 53.5,
@@ -13790,11 +13748,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 55,
+            "value": 58,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }
@@ -13982,11 +13940,10 @@
           }
         },
         "expat": {
-          "value": 60,
+          "value": 40,
           "source": "internations-2024",
           "asOf": "2024",
-          "confidence": "low",
-          "note": "Country-level survey; city value estimated."
+          "confidence": "medium"
         },
         "costOfLiving": {
           "value": 118.5,
@@ -14022,11 +13979,11 @@
             "confidence": "high"
           },
           "visaEaseIndex": {
-            "value": 40,
+            "value": 22,
             "source": "bellwether-rubric",
             "asOf": "2026",
-            "confidence": "low",
-            "note": "Curated residency-pathway estimate."
+            "confidence": "medium",
+            "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
           }
         }
       }

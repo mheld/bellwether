@@ -184,8 +184,7 @@
       "value": 65,
       "source": "internations-2024",
       "asOf": "2024",
-      "confidence": "low",
-      "note": "Country-level survey; city value estimated."
+      "confidence": "medium"
     },
     "costOfLiving": {
       "value": 61.8,
@@ -221,11 +220,11 @@
         "confidence": "high"
       },
       "visaEaseIndex": {
-        "value": 75,
+        "value": 62,
         "source": "bellwether-rubric",
         "asOf": "2026",
-        "confidence": "low",
-        "note": "Curated residency-pathway estimate."
+        "confidence": "medium",
+        "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
       }
     }
   }

@@ -165,13 +165,13 @@
         "value": 24,
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "regime": {
         "value": "worldwide",
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "hasExpatRegime": {
         "value": false,
@@ -207,9 +207,9 @@
         "confidence": "medium"
       },
       "politicalStability": {
-        "value": 0.4,
+        "value": 0.26,
         "source": "worldbank-wgi-2023",
-        "asOf": "2023",
+        "asOf": "2024",
         "confidence": "high"
       }
     },
@@ -219,7 +219,7 @@
         "source": "bellwether-rubric",
         "asOf": "2024",
         "confidence": "high",
-        "note": "Majority-English-speaking city."
+        "note": "Majority-English-speaking country."
       },
       "visaEaseIndex": {
         "value": 45,

@@ -17,7 +17,7 @@
   "blurb": "Cheap, low-tax and visa-easy for long stays; smaller global footprint and continental summers.",
   "factors": {
     "importance": {
-      "value": "Sufficiency",
+      "value": "Gamma",
       "source": "gawc-2024",
       "asOf": "2024",
       "confidence": "high"
@@ -165,13 +165,13 @@
         "value": 5,
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "regime": {
         "value": "territorial",
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "hasExpatRegime": {
         "value": true,
@@ -207,18 +207,18 @@
         "confidence": "medium"
       },
       "politicalStability": {
-        "value": -0.3,
+        "value": -0.61,
         "source": "worldbank-wgi-2023",
-        "asOf": "2023",
+        "asOf": "2024",
         "confidence": "high"
       }
     },
     "accessibility": {
       "englishProficiency": {
-        "value": 40,
+        "value": 62,
         "source": "ef-epi-2024",
         "asOf": "2024",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "visaEaseIndex": {
         "value": 90,

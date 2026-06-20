@@ -162,16 +162,16 @@
         "confidence": "high"
       },
       "capitalGainsRatePct": {
-        "value": 10,
+        "value": 0,
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "regime": {
-        "value": "worldwide",
+        "value": "hybrid",
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "hasExpatRegime": {
         "value": false,
@@ -207,18 +207,18 @@
         "confidence": "medium"
       },
       "politicalStability": {
-        "value": -0.2,
+        "value": -0.61,
         "source": "worldbank-wgi-2023",
-        "asOf": "2023",
+        "asOf": "2024",
         "confidence": "high"
       }
     },
     "accessibility": {
       "englishProficiency": {
-        "value": 45,
+        "value": 38,
         "source": "ef-epi-2024",
         "asOf": "2024",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "visaEaseIndex": {
         "value": 50,

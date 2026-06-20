@@ -17,7 +17,7 @@
   "blurb": "Fast-growing Mekong-delta megacity that is sinking — highly flood- and heat-exposed.",
   "factors": {
     "importance": {
-      "value": "Beta",
+      "value": "Beta+",
       "source": "gawc-2024",
       "asOf": "2024",
       "confidence": "high"
@@ -162,16 +162,16 @@
         "confidence": "high"
       },
       "capitalGainsRatePct": {
-        "value": 5,
+        "value": 20,
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "regime": {
         "value": "worldwide",
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "hasExpatRegime": {
         "value": false,
@@ -207,18 +207,18 @@
         "confidence": "medium"
       },
       "politicalStability": {
-        "value": 0.1,
+        "value": 0.01,
         "source": "worldbank-wgi-2023",
-        "asOf": "2023",
+        "asOf": "2024",
         "confidence": "high"
       }
     },
     "accessibility": {
       "englishProficiency": {
-        "value": 45,
+        "value": 48,
         "source": "ef-epi-2024",
         "asOf": "2024",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "visaEaseIndex": {
         "value": 55,

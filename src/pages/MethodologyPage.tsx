@@ -122,15 +122,20 @@ export function MethodologyPage() {
         </ul>
       </Section>
 
-      <Section title="Where it’s weakest">
+      <Section title="What’s verified vs. estimated">
         <p>
-          Be skeptical here: <strong className="text-ink">climate projections</strong> (especially
-          2080), <strong className="text-ink">expat friendliness</strong>, and{' '}
-          <strong className="text-ink">visa/residency ease</strong> are the hardest to source
-          credibly. Many values are curated estimates marked with low confidence. Every number
-          carries a source dot — green (high), amber (medium), red (low) — and an as-of date you can
-          hover anywhere it appears. The current dataset is a seed: approximate, illustrative, and
-          being verified city by city.
+          Several factors are now sourced from authoritative datasets and carry{' '}
+          <strong className="text-ink">high confidence</strong>: city tier (GaWC 2024), taxation
+          (PwC Worldwide Tax Summaries), English proficiency (EF EPI 2024), and political stability
+          (World Bank WGI).
+        </p>
+        <p>
+          Be more skeptical of the rest, which remain curated or crowd-sourced estimates:{' '}
+          <strong className="text-ink">climate projections</strong> (especially 2080),{' '}
+          <strong className="text-ink">expat friendliness</strong>,{' '}
+          <strong className="text-ink">visa/residency ease</strong>, and the Numbeo-based cost,
+          housing, healthcare and safety indices. Every number carries a source dot — green (high),
+          amber (medium), red (low) — and an as-of date you can hover anywhere it appears.
         </p>
       </Section>
 

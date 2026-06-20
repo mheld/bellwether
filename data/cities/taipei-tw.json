@@ -17,7 +17,7 @@
   "blurb": "High-tech island capital with great healthcare; typhoons, heat and flooding.",
   "factors": {
     "importance": {
-      "value": "Alpha",
+      "value": "Alpha-",
       "source": "gawc-2024",
       "asOf": "2024",
       "confidence": "high"
@@ -165,13 +165,13 @@
         "value": 0,
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "regime": {
-        "value": "territorial",
+        "value": "hybrid",
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "hasExpatRegime": {
         "value": false,
@@ -207,18 +207,19 @@
         "confidence": "medium"
       },
       "politicalStability": {
-        "value": 0.6,
+        "value": 0.92,
         "source": "worldbank-wgi-2023",
-        "asOf": "2023",
+        "asOf": "2024",
         "confidence": "high"
       }
     },
     "accessibility": {
       "englishProficiency": {
         "value": 50,
-        "source": "ef-epi-2024",
+        "source": "bellwether-rubric",
         "asOf": "2024",
-        "confidence": "medium"
+        "confidence": "low",
+        "note": "EF EPI score unavailable; curated estimate."
       },
       "visaEaseIndex": {
         "value": 50,

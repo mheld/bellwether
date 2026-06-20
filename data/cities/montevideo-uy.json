@@ -17,7 +17,7 @@
   "blurb": "Stable, temperate Atlantic capital with an easy residency path and modest climate exposure.",
   "factors": {
     "importance": {
-      "value": "Gamma-",
+      "value": "Beta-",
       "source": "gawc-2024",
       "asOf": "2024",
       "confidence": "high"
@@ -165,13 +165,13 @@
         "value": 12,
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "regime": {
-        "value": "territorial",
+        "value": "hybrid",
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "hasExpatRegime": {
         "value": true,
@@ -207,18 +207,18 @@
         "confidence": "medium"
       },
       "politicalStability": {
-        "value": 1,
+        "value": 1.28,
         "source": "worldbank-wgi-2023",
-        "asOf": "2023",
+        "asOf": "2024",
         "confidence": "high"
       }
     },
     "accessibility": {
       "englishProficiency": {
-        "value": 58,
+        "value": 61,
         "source": "ef-epi-2024",
         "asOf": "2024",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "visaEaseIndex": {
         "value": 80,

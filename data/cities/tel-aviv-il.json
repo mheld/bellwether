@@ -17,7 +17,7 @@
   "blurb": "Mediterranean tech hub reliant on desalination; heat, drought and security risk.",
   "factors": {
     "importance": {
-      "value": "Beta+",
+      "value": "Beta",
       "source": "gawc-2024",
       "asOf": "2024",
       "confidence": "high"
@@ -165,13 +165,13 @@
         "value": 25,
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "regime": {
         "value": "worldwide",
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "hasExpatRegime": {
         "value": true,
@@ -207,18 +207,18 @@
         "confidence": "medium"
       },
       "politicalStability": {
-        "value": -0.6,
+        "value": -1.04,
         "source": "worldbank-wgi-2023",
-        "asOf": "2023",
+        "asOf": "2024",
         "confidence": "high"
       }
     },
     "accessibility": {
       "englishProficiency": {
-        "value": 70,
+        "value": 55,
         "source": "ef-epi-2024",
         "asOf": "2024",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "visaEaseIndex": {
         "value": 50,

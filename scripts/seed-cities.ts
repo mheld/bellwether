@@ -625,7 +625,119 @@ const hazard = (src: string, [now, y2050, y2080]: Triple) => ({
   scenario: 'SSP2-4.5' as const,
 })
 
+/* ---- Verified country/city data (researched against authoritative sources) ----
+ * GaWC 2024 roster · PwC Worldwide Tax Summaries · EF EPI 2024 · World Bank WGI.
+ * These override the per-row seed guesses and travel at higher confidence. */
+
+const TAX_BY_CC: Record<string, { income: number; capgains: number; regime: TaxRegime }> = {
+  PT: { income: 53, capgains: 28, regime: 'worldwide' },
+  SG: { income: 24, capgains: 0, regime: 'territorial' },
+  CA: { income: 54.8, capgains: 27.4, regime: 'worldwide' },
+  ES: { income: 47, capgains: 30, regime: 'worldwide' },
+  JP: { income: 56, capgains: 20.3, regime: 'hybrid' },
+  AE: { income: 0, capgains: 0, regime: 'none' },
+  MX: { income: 35, capgains: 10, regime: 'worldwide' },
+  DE: { income: 47.5, capgains: 26.4, regime: 'worldwide' },
+  AU: { income: 47, capgains: 23.5, regime: 'worldwide' },
+  US: { income: 37, capgains: 23.8, regime: 'worldwide' },
+  CH: { income: 43.3, capgains: 0, regime: 'worldwide' },
+  UY: { income: 36, capgains: 12, regime: 'hybrid' },
+  GB: { income: 45, capgains: 24, regime: 'worldwide' },
+  FR: { income: 49, capgains: 30, regime: 'worldwide' },
+  NL: { income: 49.5, capgains: 31, regime: 'worldwide' },
+  AT: { income: 55, capgains: 27.5, regime: 'worldwide' },
+  DK: { income: 60.5, capgains: 42, regime: 'worldwide' },
+  SE: { income: 52, capgains: 30, regime: 'worldwide' },
+  AR: { income: 35, capgains: 15, regime: 'worldwide' },
+  CL: { income: 35.5, capgains: 0, regime: 'worldwide' },
+  NZ: { income: 39, capgains: 0, regime: 'worldwide' },
+  TH: { income: 35, capgains: 0, regime: 'hybrid' },
+  MY: { income: 30, capgains: 0, regime: 'hybrid' },
+  ZA: { income: 45, capgains: 18, regime: 'worldwide' },
+  GE: { income: 20, capgains: 5, regime: 'territorial' },
+  CO: { income: 39, capgains: 15, regime: 'worldwide' },
+  IE: { income: 52, capgains: 33, regime: 'worldwide' },
+  HK: { income: 17, capgains: 0, regime: 'territorial' },
+  KR: { income: 49.5, capgains: 27.5, regime: 'worldwide' },
+  CN: { income: 45, capgains: 20, regime: 'worldwide' },
+  BR: { income: 27.5, capgains: 22.5, regime: 'worldwide' },
+  IT: { income: 46.2, capgains: 26, regime: 'worldwide' },
+  BE: { income: 53.5, capgains: 0, regime: 'worldwide' },
+  TR: { income: 40, capgains: 0, regime: 'worldwide' },
+  IN: { income: 42.7, capgains: 12.5, regime: 'hybrid' },
+  ID: { income: 35, capgains: 0, regime: 'hybrid' },
+  TW: { income: 40, capgains: 0, regime: 'hybrid' },
+  IL: { income: 50, capgains: 25, regime: 'worldwide' },
+  CZ: { income: 23, capgains: 23, regime: 'worldwide' },
+  PL: { income: 36, capgains: 19, regime: 'worldwide' },
+  GR: { income: 44, capgains: 15, regime: 'worldwide' },
+  FI: { income: 45, capgains: 34, regime: 'worldwide' },
+  NO: { income: 39.8, capgains: 37.8, regime: 'worldwide' },
+  PA: { income: 25, capgains: 10, regime: 'territorial' },
+  QA: { income: 0, capgains: 0, regime: 'none' },
+  VN: { income: 35, capgains: 20, regime: 'worldwide' },
+}
+
+/** EF EPI 2024 score, or 'native' for majority-English countries (not in EPI). */
+const EPI_BY_CC: Record<string, number | 'native'> = {
+  PT: 605, SG: 609, CA: 'native', ES: 538, JP: 454, AE: 489, MX: 459, DE: 598,
+  AU: 'native', US: 'native', CH: 550, UY: 538, GB: 'native', FR: 524, NL: 636,
+  AT: 600, DK: 603, SE: 608, AR: 562, CL: 525, NZ: 'native', TH: 415, MY: 566,
+  ZA: 594, GE: 543, CO: 485, IE: 'native', HK: 549, KR: 523, CN: 455, BR: 466,
+  IT: 528, BE: 592, TR: 497, IN: 490, ID: 468, IL: 522, CZ: 567, PL: 588,
+  GR: 602, FI: 590, NO: 610, PA: 488, QA: 480, VN: 498,
+  // TW omitted — no authoritative 2024 EPI score; falls back to the seed estimate.
+}
+
+/** World Bank WGI Political Stability estimate (~2024 release), −2.5…2.5. */
+const WGI_BY_CC: Record<string, number> = {
+  PT: 0.54, SG: 1.23, CA: 0.6, ES: 0.0, JP: 1.13, AE: 0.79, MX: -0.72, DE: 0.12,
+  AU: 0.79, US: -0.1, CH: 0.98, UY: 1.28, GB: 0.26, FR: -0.24, NL: 0.43,
+  AT: 0.49, DK: 0.77, SE: 0.6, AR: -0.17, CL: 0.12, NZ: 1.15, TH: -0.68,
+  MY: 0.38, ZA: -0.62, GE: -0.61, CO: -0.97, IE: 0.71, HK: 0.63, KR: 0.64,
+  CN: -0.15, BR: -0.52, IT: 0.31, BE: 0.12, TR: -0.97, IN: -0.79, ID: -0.61,
+  TW: 0.92, IL: -1.04, CZ: 0.97, PL: 0.5, GR: 0.14, FI: 0.83, NO: 0.9,
+  PA: 0.26, QA: 0.95, VN: 0.01,
+}
+
+/** GaWC 2024 world-city classification, by city id. */
+const GAWC_BY_ID: Record<string, GaWCClass> = {
+  'london-uk': 'Alpha++', 'new-york-us': 'Alpha++', 'hong-kong-hk': 'Alpha+',
+  'singapore-sg': 'Alpha+', 'shanghai-cn': 'Alpha+', 'dubai-ae': 'Alpha+',
+  'paris-fr': 'Alpha+', 'tokyo-jp': 'Alpha+', 'sydney-au': 'Alpha+',
+  'los-angeles-us': 'Alpha', 'toronto-ca': 'Alpha', 'seoul-kr': 'Alpha',
+  'madrid-es': 'Alpha', 'milan-it': 'Alpha', 'mexico-city-mx': 'Alpha',
+  'sao-paulo-br': 'Alpha', 'mumbai-in': 'Alpha', 'amsterdam-nl': 'Alpha',
+  'frankfurt-de': 'Alpha', 'brussels-be': 'Alpha-', 'chicago-us': 'Alpha',
+  'istanbul-tr': 'Alpha', 'kuala-lumpur-my': 'Alpha', 'bangkok-th': 'Alpha',
+  'jakarta-id': 'Alpha', 'taipei-tw': 'Alpha-', 'warsaw-pl': 'Alpha',
+  'vienna-at': 'Alpha-', 'barcelona-es': 'Beta+', 'san-francisco-us': 'Alpha-',
+  'buenos-aires-ar': 'Alpha-', 'santiago-cl': 'Alpha-', 'bogota-co': 'Beta+',
+  'lisbon-pt': 'Alpha-', 'berlin-de': 'Alpha-', 'melbourne-au': 'Alpha-',
+  'auckland-nz': 'Beta+', 'dublin-ie': 'Alpha-', 'prague-cz': 'Beta+',
+  'athens-gr': 'Beta+', 'rome-it': 'Beta+', 'stockholm-se': 'Alpha-',
+  'copenhagen-dk': 'Beta', 'helsinki-fi': 'Beta-', 'oslo-no': 'Beta',
+  'munich-de': 'Alpha-', 'vancouver-ca': 'Beta-', 'boston-us': 'Alpha-',
+  'miami-us': 'Beta+', 'tel-aviv-il': 'Beta', 'doha-qa': 'Beta+',
+  'cape-town-za': 'Gamma+', 'montevideo-uy': 'Beta-', 'tbilisi-ge': 'Gamma',
+  'medellin-co': 'Sufficiency', 'panama-city-pa': 'Beta-', 'bengaluru-in': 'Beta+',
+  'ho-chi-minh-city-vn': 'Beta+', 'austin-us': 'Gamma+', 'zurich-ch': 'Alpha-',
+}
+
+const epiToScore = (epi: number) => Math.max(0, Math.min(100, Math.round((epi - 350) / 3.1)))
+
 function toCity(r: Row): City {
+  const gawc = GAWC_BY_ID[r.id] ?? r.gawc
+  const tax = TAX_BY_CC[r.cc] ?? { income: r.income, capgains: r.capgains, regime: r.regime }
+  const stab = WGI_BY_CC[r.cc] ?? r.stability
+  const epi = EPI_BY_CC[r.cc]
+  const eng =
+    epi === 'native'
+      ? { value: 100, source: 'bellwether-rubric', conf: 'high' as Confidence, note: 'Majority-English-speaking country.' }
+      : typeof epi === 'number'
+        ? { value: epiToScore(epi), source: 'ef-epi-2024', conf: 'high' as Confidence, note: undefined as string | undefined }
+        : { value: r.english, source: 'bellwether-rubric', conf: 'low' as Confidence, note: 'EF EPI score unavailable; curated estimate.' }
+
   return {
     id: r.id,
     name: r.name,
@@ -636,7 +748,7 @@ function toCity(r: Row): City {
     population: m(r.pop, 'un-wup-2018', '2020', 'medium'),
     blurb: r.blurb,
     factors: {
-      importance: m(r.gawc, 'gawc-2024', '2024', 'high'),
+      importance: m(gawc, 'gawc-2024', '2024', 'high'),
       climate: {
         hazards: {
           heat: hazard(HAZARD_SOURCE.heat, r.heat),
@@ -655,9 +767,9 @@ function toCity(r: Row): City {
         rent1brCenterUsd: m(r.rent, 'numbeo-2025', '2025', 'medium'),
       },
       taxation: {
-        topIncomeRatePct: m(r.income, 'pwc-tax-2025', '2025', 'high'),
-        capitalGainsRatePct: m(r.capgains, 'pwc-tax-2025', '2025', 'medium'),
-        regime: m(r.regime, 'pwc-tax-2025', '2025', 'medium'),
+        topIncomeRatePct: m(tax.income, 'pwc-tax-2025', '2025', 'high'),
+        capitalGainsRatePct: m(tax.capgains, 'pwc-tax-2025', '2025', 'high'),
+        regime: m(tax.regime, 'pwc-tax-2025', '2025', 'high'),
         hasExpatRegime: m(r.expatRegime, 'pwc-tax-2025', '2025', 'medium'),
       },
       expat: m(r.expat, 'internations-2024', '2024', 'low', 'Country-level survey; city value estimated.'),
@@ -665,16 +777,10 @@ function toCity(r: Row): City {
       healthcare: m(r.health, 'numbeo-2025', '2025', 'medium'),
       safety: {
         crimeSafetyIndex: m(r.safety, 'numbeo-2025', '2025', 'medium'),
-        politicalStability: m(r.stability, 'worldbank-wgi-2023', '2023', 'high'),
+        politicalStability: m(stab, 'worldbank-wgi-2023', '2024', 'high'),
       },
       accessibility: {
-        englishProficiency: m(
-          r.english,
-          r.english === 100 ? 'bellwether-rubric' : 'ef-epi-2024',
-          '2024',
-          r.english === 100 ? 'high' : 'medium',
-          r.english === 100 ? 'Majority-English-speaking city.' : undefined,
-        ),
+        englishProficiency: m(eng.value, eng.source, '2024', eng.conf, eng.note),
         visaEaseIndex: m(r.visa, 'bellwether-rubric', '2026', 'low', 'Curated residency-pathway estimate.'),
       },
     },

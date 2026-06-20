@@ -17,7 +17,7 @@
   "blurb": "Fast-growing and affordable; continental climate with modest hazard.",
   "factors": {
     "importance": {
-      "value": "Alpha-",
+      "value": "Alpha",
       "source": "gawc-2024",
       "asOf": "2024",
       "confidence": "high"
@@ -156,7 +156,7 @@
     },
     "taxation": {
       "topIncomeRatePct": {
-        "value": 32,
+        "value": 36,
         "source": "pwc-tax-2025",
         "asOf": "2025",
         "confidence": "high"
@@ -165,13 +165,13 @@
         "value": 19,
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "regime": {
         "value": "worldwide",
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "hasExpatRegime": {
         "value": false,
@@ -209,16 +209,16 @@
       "politicalStability": {
         "value": 0.5,
         "source": "worldbank-wgi-2023",
-        "asOf": "2023",
+        "asOf": "2024",
         "confidence": "high"
       }
     },
     "accessibility": {
       "englishProficiency": {
-        "value": 62,
+        "value": 77,
         "source": "ef-epi-2024",
         "asOf": "2024",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "visaEaseIndex": {
         "value": 55,

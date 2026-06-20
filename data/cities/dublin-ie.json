@@ -156,7 +156,7 @@
     },
     "taxation": {
       "topIncomeRatePct": {
-        "value": 48,
+        "value": 52,
         "source": "pwc-tax-2025",
         "asOf": "2025",
         "confidence": "high"
@@ -165,13 +165,13 @@
         "value": 33,
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "regime": {
         "value": "worldwide",
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "hasExpatRegime": {
         "value": false,
@@ -207,9 +207,9 @@
         "confidence": "medium"
       },
       "politicalStability": {
-        "value": 0.9,
+        "value": 0.71,
         "source": "worldbank-wgi-2023",
-        "asOf": "2023",
+        "asOf": "2024",
         "confidence": "high"
       }
     },
@@ -219,7 +219,7 @@
         "source": "bellwether-rubric",
         "asOf": "2024",
         "confidence": "high",
-        "note": "Majority-English-speaking city."
+        "note": "Majority-English-speaking country."
       },
       "visaEaseIndex": {
         "value": 50,

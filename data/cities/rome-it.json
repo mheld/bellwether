@@ -17,7 +17,7 @@
   "blurb": "Historic capital with a flat-tax option; Mediterranean heat, drought and water stress.",
   "factors": {
     "importance": {
-      "value": "Alpha-",
+      "value": "Beta+",
       "source": "gawc-2024",
       "asOf": "2024",
       "confidence": "high"
@@ -156,7 +156,7 @@
     },
     "taxation": {
       "topIncomeRatePct": {
-        "value": 43,
+        "value": 46.2,
         "source": "pwc-tax-2025",
         "asOf": "2025",
         "confidence": "high"
@@ -165,13 +165,13 @@
         "value": 26,
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "regime": {
         "value": "worldwide",
         "source": "pwc-tax-2025",
         "asOf": "2025",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "hasExpatRegime": {
         "value": true,
@@ -207,18 +207,18 @@
         "confidence": "medium"
       },
       "politicalStability": {
-        "value": 0.4,
+        "value": 0.31,
         "source": "worldbank-wgi-2023",
-        "asOf": "2023",
+        "asOf": "2024",
         "confidence": "high"
       }
     },
     "accessibility": {
       "englishProficiency": {
-        "value": 50,
+        "value": 57,
         "source": "ef-epi-2024",
         "asOf": "2024",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "visaEaseIndex": {
         "value": 60,

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { WeightsPanel } from '../components/WeightsPanel'
 import { RankedList } from '../components/RankedList'
@@ -13,6 +13,8 @@ export function HomePage() {
 
   const [query, setQuery] = useState('')
   const [regions, setRegions] = useState<Set<string>>(new Set())
+  const PAGE = 25
+  const [visible, setVisible] = useState(PAGE)
 
   const rankById = useMemo(
     () => new Map(ranked.map((sc, i) => [sc.city.id, i + 1])),
@@ -28,6 +30,10 @@ export function HomePage() {
       return true
     })
   }, [ranked, query, regions])
+
+  // Reset the visible window whenever the filtered set changes.
+  useEffect(() => setVisible(PAGE), [query, regions])
+  const shown = filtered.slice(0, visible)
 
   const toggleRegion = (r: string) =>
     setRegions((prev) => {
@@ -88,7 +94,24 @@ export function HomePage() {
             total={ranked.length}
           />
 
-          <RankedList ranked={filtered} rankById={rankById} />
+          <RankedList ranked={shown} rankById={rankById} />
+
+          {filtered.length > visible && (
+            <div className="mt-5 flex items-center justify-center gap-3">
+              <button
+                onClick={() => setVisible((v) => v + PAGE)}
+                className="rounded-md px-3 py-1.5 text-xs text-ink-soft ring-1 ring-line-strong transition-colors hover:text-ink hover:ring-ink-faint"
+              >
+                Show {Math.min(PAGE, filtered.length - visible)} more
+              </button>
+              <button
+                onClick={() => setVisible(filtered.length)}
+                className="text-xs text-signal hover:underline"
+              >
+                Show all {filtered.length}
+              </button>
+            </div>
+          )}
 
           <p className="mt-6 text-[11px] leading-relaxed text-ink-faint">
             Scores are <em>relative</em> within this set of cities, not absolute. Most

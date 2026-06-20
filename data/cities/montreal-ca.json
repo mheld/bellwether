@@ -1,0 +1,233 @@
+{
+  "id": "montreal-ca",
+  "name": "Montreal",
+  "country": "Canada",
+  "countryCode": "CA",
+  "region": "North America",
+  "coords": {
+    "lat": 45.5,
+    "lng": -73.57
+  },
+  "population": {
+    "value": 4300000,
+    "source": "un-wup-2018",
+    "asOf": "2020",
+    "confidence": "medium"
+  },
+  "blurb": "Affordable, French-speaking Canadian metro; cold, water-secure, low overall hazard.",
+  "factors": {
+    "importance": {
+      "value": "Beta+",
+      "source": "gawc-2024",
+      "asOf": "2024",
+      "confidence": "high"
+    },
+    "climate": {
+      "hazards": {
+        "heat": {
+          "now": {
+            "value": 15,
+            "source": "worldbank-cckp",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 35,
+            "source": "worldbank-cckp",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 35,
+            "source": "worldbank-cckp",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "drought": {
+          "now": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "flood": {
+          "now": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "wildfire": {
+          "now": {
+            "value": 15,
+            "source": "bellwether-rubric",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 15,
+            "source": "bellwether-rubric",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 35,
+            "source": "bellwether-rubric",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "waterStress": {
+          "now": {
+            "value": 15,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 15,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 15,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        }
+      }
+    },
+    "airport": {
+      "primaryIata": "YUL",
+      "directDestinations": {
+        "value": 169,
+        "source": "flightsfrom-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      }
+    },
+    "realEstate": {
+      "buyPricePerSqmUsd": {
+        "value": 5300,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "medium"
+      },
+      "rent1brCenterUsd": {
+        "value": 1211,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "medium"
+      }
+    },
+    "taxation": {
+      "topIncomeRatePct": {
+        "value": 54.8,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "capitalGainsRatePct": {
+        "value": 27.4,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "regime": {
+        "value": "worldwide",
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "hasExpatRegime": {
+        "value": false,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      }
+    },
+    "expat": {
+      "value": 72,
+      "source": "internations-2024",
+      "asOf": "2024",
+      "confidence": "low",
+      "note": "Estimated from country reputation; city not in InterNations ranking."
+    },
+    "costOfLiving": {
+      "value": 60.3,
+      "source": "numbeo-2025",
+      "asOf": "2026",
+      "confidence": "medium"
+    },
+    "healthcare": {
+      "value": 61.9,
+      "source": "numbeo-2025",
+      "asOf": "2026",
+      "confidence": "medium"
+    },
+    "safety": {
+      "crimeSafetyIndex": {
+        "value": 67.2,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "medium"
+      },
+      "politicalStability": {
+        "value": 0.6,
+        "source": "worldbank-wgi-2023",
+        "asOf": "2024",
+        "confidence": "high"
+      }
+    },
+    "accessibility": {
+      "englishProficiency": {
+        "value": 100,
+        "source": "bellwether-rubric",
+        "asOf": "2024",
+        "confidence": "high",
+        "note": "Majority-English-speaking country."
+      },
+      "visaEaseIndex": {
+        "value": 58,
+        "source": "bellwether-rubric",
+        "asOf": "2026",
+        "confidence": "medium",
+        "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
+      }
+    }
+  }
+}

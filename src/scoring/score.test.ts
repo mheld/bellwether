@@ -105,9 +105,9 @@ describe('scoreCities (integration with the real dataset)', () => {
     }
     const top = scoreCities(cities, climateOnly)[0]
     // The winner should be one of the cool, water-secure, low-hazard cities.
-    expect(['oslo-no', 'helsinki-fi', 'zurich-ch', 'stockholm-se', 'toronto-ca']).toContain(
-      top.city.id,
-    )
+    expect([
+      'reykjavik-is', 'tallinn-ee', 'oslo-no', 'helsinki-fi', 'zurich-ch', 'stockholm-se', 'toronto-ca',
+    ]).toContain(top.city.id)
   })
 })
 

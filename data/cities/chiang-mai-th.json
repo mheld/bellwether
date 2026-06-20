@@ -1,0 +1,232 @@
+{
+  "id": "chiang-mai-th",
+  "name": "Chiang Mai",
+  "country": "Thailand",
+  "countryCode": "TH",
+  "region": "Southeast Asia",
+  "coords": {
+    "lat": 18.79,
+    "lng": 98.99
+  },
+  "population": {
+    "value": 1200000,
+    "source": "un-wup-2018",
+    "asOf": "2020",
+    "confidence": "medium"
+  },
+  "blurb": "Digital-nomad capital of the north; cheap and easy, but severe dry-season drought and smoke.",
+  "factors": {
+    "importance": {
+      "value": "Sufficiency",
+      "source": "gawc-2024",
+      "asOf": "2024",
+      "confidence": "high"
+    },
+    "climate": {
+      "hazards": {
+        "heat": {
+          "now": {
+            "value": 55,
+            "source": "worldbank-cckp",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 72,
+            "source": "worldbank-cckp",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 72,
+            "source": "worldbank-cckp",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "drought": {
+          "now": {
+            "value": 72,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 90,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 90,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "flood": {
+          "now": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "wildfire": {
+          "now": {
+            "value": 35,
+            "source": "bellwether-rubric",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 55,
+            "source": "bellwether-rubric",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 72,
+            "source": "bellwether-rubric",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "waterStress": {
+          "now": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        }
+      }
+    },
+    "airport": {
+      "primaryIata": "CNX",
+      "directDestinations": {
+        "value": 31,
+        "source": "flightsfrom-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      }
+    },
+    "realEstate": {
+      "buyPricePerSqmUsd": {
+        "value": 1976,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "medium"
+      },
+      "rent1brCenterUsd": {
+        "value": 500,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "medium"
+      }
+    },
+    "taxation": {
+      "topIncomeRatePct": {
+        "value": 35,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "capitalGainsRatePct": {
+        "value": 0,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "regime": {
+        "value": "hybrid",
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "hasExpatRegime": {
+        "value": false,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      }
+    },
+    "expat": {
+      "value": 65,
+      "source": "internations-2024",
+      "asOf": "2024",
+      "confidence": "low",
+      "note": "Estimated from country reputation; city not in InterNations ranking."
+    },
+    "costOfLiving": {
+      "value": 32.6,
+      "source": "numbeo-2025",
+      "asOf": "2026",
+      "confidence": "medium"
+    },
+    "healthcare": {
+      "value": 84.7,
+      "source": "numbeo-2025",
+      "asOf": "2026",
+      "confidence": "medium"
+    },
+    "safety": {
+      "crimeSafetyIndex": {
+        "value": 78,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "medium"
+      },
+      "politicalStability": {
+        "value": -0.68,
+        "source": "worldbank-wgi-2023",
+        "asOf": "2024",
+        "confidence": "high"
+      }
+    },
+    "accessibility": {
+      "englishProficiency": {
+        "value": 21,
+        "source": "ef-epi-2024",
+        "asOf": "2024",
+        "confidence": "high"
+      },
+      "visaEaseIndex": {
+        "value": 72,
+        "source": "bellwether-rubric",
+        "asOf": "2026",
+        "confidence": "medium",
+        "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
+      }
+    }
+  }
+}

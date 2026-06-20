@@ -1,0 +1,232 @@
+{
+  "id": "tallinn-ee",
+  "name": "Tallinn",
+  "country": "Estonia",
+  "countryCode": "EE",
+  "region": "Northern Europe",
+  "coords": {
+    "lat": 59.44,
+    "lng": 24.75
+  },
+  "population": {
+    "value": 450000,
+    "source": "un-wup-2018",
+    "asOf": "2020",
+    "confidence": "medium"
+  },
+  "blurb": "Digital-forward Baltic capital (e-residency); cool, low-hazard and very safe.",
+  "factors": {
+    "importance": {
+      "value": "Sufficiency",
+      "source": "gawc-2024",
+      "asOf": "2024",
+      "confidence": "high"
+    },
+    "climate": {
+      "hazards": {
+        "heat": {
+          "now": {
+            "value": 15,
+            "source": "worldbank-cckp",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 15,
+            "source": "worldbank-cckp",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 15,
+            "source": "worldbank-cckp",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "drought": {
+          "now": {
+            "value": 15,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 15,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "flood": {
+          "now": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "wildfire": {
+          "now": {
+            "value": 15,
+            "source": "bellwether-rubric",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 15,
+            "source": "bellwether-rubric",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 15,
+            "source": "bellwether-rubric",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "waterStress": {
+          "now": {
+            "value": 15,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 15,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 15,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        }
+      }
+    },
+    "airport": {
+      "primaryIata": "TLL",
+      "directDestinations": {
+        "value": 52,
+        "source": "flightsfrom-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      }
+    },
+    "realEstate": {
+      "buyPricePerSqmUsd": {
+        "value": 4919,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "medium"
+      },
+      "rent1brCenterUsd": {
+        "value": 799,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "medium"
+      }
+    },
+    "taxation": {
+      "topIncomeRatePct": {
+        "value": 22,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "capitalGainsRatePct": {
+        "value": 22,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "regime": {
+        "value": "worldwide",
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "hasExpatRegime": {
+        "value": false,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      }
+    },
+    "expat": {
+      "value": 80,
+      "source": "internations-2024",
+      "asOf": "2024",
+      "confidence": "low",
+      "note": "Estimated from country reputation; city not in InterNations ranking."
+    },
+    "costOfLiving": {
+      "value": 52.7,
+      "source": "numbeo-2025",
+      "asOf": "2026",
+      "confidence": "medium"
+    },
+    "healthcare": {
+      "value": 73.9,
+      "source": "numbeo-2025",
+      "asOf": "2026",
+      "confidence": "medium"
+    },
+    "safety": {
+      "crimeSafetyIndex": {
+        "value": 78.4,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "medium"
+      },
+      "politicalStability": {
+        "value": 0.85,
+        "source": "worldbank-wgi-2023",
+        "asOf": "2024",
+        "confidence": "high"
+      }
+    },
+    "accessibility": {
+      "englishProficiency": {
+        "value": 74,
+        "source": "ef-epi-2024",
+        "asOf": "2024",
+        "confidence": "high"
+      },
+      "visaEaseIndex": {
+        "value": 75,
+        "source": "bellwether-rubric",
+        "asOf": "2026",
+        "confidence": "medium",
+        "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
+      }
+    }
+  }
+}

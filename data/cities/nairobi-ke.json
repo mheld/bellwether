@@ -1,0 +1,231 @@
+{
+  "id": "nairobi-ke",
+  "name": "Nairobi",
+  "country": "Kenya",
+  "countryCode": "KE",
+  "region": "Africa",
+  "coords": {
+    "lat": -1.29,
+    "lng": 36.82
+  },
+  "population": {
+    "value": 5100000,
+    "source": "un-wup-2018",
+    "asOf": "2020",
+    "confidence": "medium"
+  },
+  "blurb": "Highland East-African hub; mild temperatures but drought and flood variability, safety concerns.",
+  "factors": {
+    "importance": {
+      "value": "Beta",
+      "source": "gawc-2024",
+      "asOf": "2024",
+      "confidence": "high"
+    },
+    "climate": {
+      "hazards": {
+        "heat": {
+          "now": {
+            "value": 15,
+            "source": "worldbank-cckp",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 35,
+            "source": "worldbank-cckp",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 35,
+            "source": "worldbank-cckp",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "drought": {
+          "now": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "flood": {
+          "now": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "wildfire": {
+          "now": {
+            "value": 15,
+            "source": "bellwether-rubric",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 15,
+            "source": "bellwether-rubric",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 35,
+            "source": "bellwether-rubric",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "waterStress": {
+          "now": {
+            "value": 35,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "medium"
+          },
+          "y2050": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        }
+      }
+    },
+    "airport": {
+      "primaryIata": "NBO",
+      "directDestinations": {
+        "value": 66,
+        "source": "flightsfrom-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      }
+    },
+    "realEstate": {
+      "buyPricePerSqmUsd": {
+        "value": 1677,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "medium"
+      },
+      "rent1brCenterUsd": {
+        "value": 395,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "medium"
+      }
+    },
+    "taxation": {
+      "topIncomeRatePct": {
+        "value": 35,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "capitalGainsRatePct": {
+        "value": 15,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "regime": {
+        "value": "hybrid",
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "hasExpatRegime": {
+        "value": false,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "medium"
+      }
+    },
+    "expat": {
+      "value": 80,
+      "source": "internations-2024",
+      "asOf": "2024",
+      "confidence": "medium"
+    },
+    "costOfLiving": {
+      "value": 31.4,
+      "source": "numbeo-2025",
+      "asOf": "2026",
+      "confidence": "medium"
+    },
+    "healthcare": {
+      "value": 63.2,
+      "source": "numbeo-2025",
+      "asOf": "2026",
+      "confidence": "medium"
+    },
+    "safety": {
+      "crimeSafetyIndex": {
+        "value": 40.8,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "medium"
+      },
+      "politicalStability": {
+        "value": -0.97,
+        "source": "worldbank-wgi-2023",
+        "asOf": "2024",
+        "confidence": "high"
+      }
+    },
+    "accessibility": {
+      "englishProficiency": {
+        "value": 75,
+        "source": "ef-epi-2024",
+        "asOf": "2024",
+        "confidence": "high"
+      },
+      "visaEaseIndex": {
+        "value": 58,
+        "source": "bellwether-rubric",
+        "asOf": "2026",
+        "confidence": "medium",
+        "note": "Curated residency-pathway rubric (nomad/retirement/investor & PR routes)."
+      }
+    }
+  }
+}

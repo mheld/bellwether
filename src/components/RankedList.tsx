@@ -5,11 +5,25 @@ import { ClimateStripe } from './ClimateStripe'
 import { topStrengths } from '../ui/factors'
 import { formatScore } from '../ui/scale'
 
-export function RankedList({ ranked }: { ranked: ScoredCity[] }) {
+export function RankedList({
+  ranked,
+  rankById,
+}: {
+  ranked: ScoredCity[]
+  /** true rank (1-based) by city id, so ranks stay stable under filtering */
+  rankById?: Map<string, number>
+}) {
+  if (ranked.length === 0) {
+    return (
+      <div className="border-y border-line py-16 text-center text-sm text-ink-faint">
+        No cities match your filters.
+      </div>
+    )
+  }
   return (
     <ol className="divide-y divide-line border-y border-line">
       {ranked.map((sc, i) => (
-        <CityRow key={sc.city.id} scored={sc} rank={i + 1} />
+        <CityRow key={sc.city.id} scored={sc} rank={rankById?.get(sc.city.id) ?? i + 1} />
       ))}
     </ol>
   )

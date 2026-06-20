@@ -1,6 +1,8 @@
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { WeightsPanel } from '../components/WeightsPanel'
 import { RankedList } from '../components/RankedList'
+import { FilterBar } from '../components/FilterBar'
 import { ShareButton } from '../components/ShareButton'
 import { useScored } from '../state/useScored'
 import { useApplySharedWeights } from '../state/urlState'
@@ -8,6 +10,36 @@ import { useApplySharedWeights } from '../state/urlState'
 export function HomePage() {
   useApplySharedWeights()
   const ranked = useScored()
+
+  const [query, setQuery] = useState('')
+  const [regions, setRegions] = useState<Set<string>>(new Set())
+
+  const rankById = useMemo(
+    () => new Map(ranked.map((sc, i) => [sc.city.id, i + 1])),
+    [ranked],
+  )
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase()
+    return ranked.filter((sc) => {
+      const c = sc.city
+      if (regions.size && !regions.has(c.region)) return false
+      if (q && !`${c.name} ${c.country}`.toLowerCase().includes(q)) return false
+      return true
+    })
+  }, [ranked, query, regions])
+
+  const toggleRegion = (r: string) =>
+    setRegions((prev) => {
+      const next = new Set(prev)
+      next.has(r) ? next.delete(r) : next.add(r)
+      return next
+    })
+
+  const clearFilters = () => {
+    setQuery('')
+    setRegions(new Set())
+  }
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -46,7 +78,17 @@ export function HomePage() {
             </Link>
           </div>
 
-          <RankedList ranked={ranked} />
+          <FilterBar
+            query={query}
+            onQuery={setQuery}
+            selected={regions}
+            onToggleRegion={toggleRegion}
+            onClear={clearFilters}
+            count={filtered.length}
+            total={ranked.length}
+          />
+
+          <RankedList ranked={filtered} rankById={rankById} />
 
           <p className="mt-6 text-[11px] leading-relaxed text-ink-faint">
             Scores are <em>relative</em> within this set of cities, not absolute. Seed

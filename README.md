@@ -90,8 +90,16 @@ and `/compare` resolve to `index.html`). With the repo connected to Cloudflare:
 - **Build command:** `npm run build`
 - **Deploy command:** `npx wrangler deploy`
 
+Or run `npm run deploy` (builds, then `npx wrangler deploy`). The primary deploy
+path is Cloudflare's connected build on push to `main`.
+
 > SPA routing is handled by the Worker config, **not** a `_redirects` file — the
 > Workers assets handler rejects a `/* /index.html 200` catch-all as a redirect loop.
+
+> `wrangler` is intentionally **not** a pinned dependency: it pulls a non-optional
+> `sharp` that fails to build from source on Node 24 + macOS, which would break a
+> clean `npm install`. `npx wrangler` (and Cloudflare's Linux build) work fine. For
+> frequent local deploys, install it globally: `npm i -g wrangler --ignore-scripts`.
 
 Vercel / Cloudflare Pages also work (framework preset: Vite, output `dist`); for
 Pages, add a `public/_redirects` with `/* /index.html 200`.

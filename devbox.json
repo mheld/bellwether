@@ -11,7 +11,8 @@
       "test": ["npm test"],
       "data": ["npm run build:data"],
       "seed": ["npx tsx scripts/seed-cities.ts"],
-      "preview": ["npm run preview"]
+      "preview": ["npm run preview"],
+      "deploy": ["npm run deploy"]
     }
   }
 }

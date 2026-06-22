@@ -9,6 +9,7 @@
     "prebuild": "npm run build:data",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
+    "deploy": "npm run build && npx --yes wrangler deploy",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc -b --noEmit"

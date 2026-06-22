@@ -50,6 +50,12 @@ function CityRow({ scored, rank }: { scored: ScoredCity; rank: number }) {
           <div className="flex items-baseline gap-2">
             <h3 className="truncate font-display text-base font-semibold text-ink">{city.name}</h3>
             <span className="truncate text-xs text-ink-faint">{city.country}</span>
+            <span
+              className="nums shrink-0 rounded bg-ink/5 px-1.5 py-0.5 font-mono text-[10px] font-medium uppercase tracking-wide text-ink-soft"
+              title={`GaWC world-city tier: ${city.factors.importance.value}`}
+            >
+              {city.factors.importance.value}
+            </span>
           </div>
           <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1">
             {strengths.map((s) => (

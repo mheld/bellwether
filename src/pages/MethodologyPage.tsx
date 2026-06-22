@@ -147,6 +147,13 @@ export function MethodologyPage() {
             the 2050 and especially 2080 projections are genuinely uncertain, so use the
             climate-horizon sliders to decide how much they count.
           </li>
+          <li>
+            <strong className="text-ink">Country proxies (the GaWC long tail):</strong> smaller
+            cities below the Beta tier carry an authoritative GaWC tier, tax, language and stability,
+            but their cost, housing, safety, healthcare and climate are{' '}
+            <em>country-level baselines</em>, not city-specific figures. Their airport connectivity is
+            estimated from tier. Treat these as directional placeholders pending city-level data.
+          </li>
         </ul>
       </Section>
 

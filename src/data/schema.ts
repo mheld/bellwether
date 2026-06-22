@@ -110,6 +110,7 @@ export const GaWCClass = z.enum([
   'Gamma+',
   'Gamma',
   'Gamma-',
+  'High sufficiency',
   'Sufficiency',
 ])
 export type GaWCClass = z.infer<typeof GaWCClass>
@@ -307,6 +308,7 @@ export const GAWC_ORDINAL: Record<GaWCClass, number> = {
   'Gamma+': 40,
   Gamma: 32,
   'Gamma-': 24,
+  'High sufficiency': 18,
   Sufficiency: 12,
 }
 

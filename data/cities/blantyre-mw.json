@@ -1,0 +1,237 @@
+{
+  "id": "blantyre-mw",
+  "name": "Blantyre",
+  "country": "Malawi",
+  "countryCode": "MW",
+  "region": "Africa",
+  "coords": {
+    "lat": -15.79,
+    "lng": 35.01
+  },
+  "population": {
+    "value": 1100000,
+    "source": "un-wup-2018",
+    "asOf": "2020",
+    "confidence": "low"
+  },
+  "factors": {
+    "importance": {
+      "value": "Sufficiency",
+      "source": "gawc-2024",
+      "asOf": "2024",
+      "confidence": "high"
+    },
+    "climate": {
+      "hazards": {
+        "heat": {
+          "now": {
+            "value": 72,
+            "source": "worldbank-cckp",
+            "asOf": "2024",
+            "confidence": "low"
+          },
+          "y2050": {
+            "value": 72,
+            "source": "worldbank-cckp",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 72,
+            "source": "worldbank-cckp",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "drought": {
+          "now": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "low"
+          },
+          "y2050": {
+            "value": 72,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 72,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "flood": {
+          "now": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "low"
+          },
+          "y2050": {
+            "value": 72,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 72,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "wildfire": {
+          "now": {
+            "value": 35,
+            "source": "bellwether-rubric",
+            "asOf": "2024",
+            "confidence": "low"
+          },
+          "y2050": {
+            "value": 55,
+            "source": "bellwether-rubric",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 55,
+            "source": "bellwether-rubric",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        },
+        "waterStress": {
+          "now": {
+            "value": 55,
+            "source": "wri-aqueduct-40",
+            "asOf": "2024",
+            "confidence": "low"
+          },
+          "y2050": {
+            "value": 72,
+            "source": "wri-aqueduct-40",
+            "asOf": "2050",
+            "confidence": "low"
+          },
+          "y2080": {
+            "value": 72,
+            "source": "wri-aqueduct-40",
+            "asOf": "2080",
+            "confidence": "low"
+          },
+          "scenario": "SSP2-4.5"
+        }
+      }
+    },
+    "airport": {
+      "primaryIata": "BLA",
+      "directDestinations": {
+        "value": 22,
+        "source": "bellwether-rubric",
+        "asOf": "2025",
+        "confidence": "low",
+        "note": "Estimated from city tier."
+      }
+    },
+    "realEstate": {
+      "buyPricePerSqmUsd": {
+        "value": 1000,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "low",
+        "note": "Country-level proxy."
+      },
+      "rent1brCenterUsd": {
+        "value": 450,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "low",
+        "note": "Country-level proxy."
+      }
+    },
+    "taxation": {
+      "topIncomeRatePct": {
+        "value": 35,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "capitalGainsRatePct": {
+        "value": 0,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "regime": {
+        "value": "worldwide",
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "high"
+      },
+      "hasExpatRegime": {
+        "value": false,
+        "source": "pwc-tax-2025",
+        "asOf": "2025",
+        "confidence": "low"
+      }
+    },
+    "expat": {
+      "value": 45,
+      "source": "internations-2024",
+      "asOf": "2024",
+      "confidence": "low",
+      "note": "Country-level reputation estimate."
+    },
+    "costOfLiving": {
+      "value": 36,
+      "source": "numbeo-2025",
+      "asOf": "2026",
+      "confidence": "low",
+      "note": "Country-level proxy."
+    },
+    "healthcare": {
+      "value": 42,
+      "source": "numbeo-2025",
+      "asOf": "2026",
+      "confidence": "low",
+      "note": "Country-level proxy."
+    },
+    "safety": {
+      "crimeSafetyIndex": {
+        "value": 50,
+        "source": "numbeo-2025",
+        "asOf": "2026",
+        "confidence": "low",
+        "note": "Country-level proxy."
+      },
+      "politicalStability": {
+        "value": -0.05,
+        "source": "worldbank-wgi-2023",
+        "asOf": "2024",
+        "confidence": "high"
+      }
+    },
+    "accessibility": {
+      "englishProficiency": {
+        "value": 40,
+        "source": "bellwether-rubric",
+        "asOf": "2024",
+        "confidence": "low"
+      },
+      "visaEaseIndex": {
+        "value": 35,
+        "source": "bellwether-rubric",
+        "asOf": "2026",
+        "confidence": "medium",
+        "note": "Country-level residency rubric."
+      }
+    }
+  }
+}

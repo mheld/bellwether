@@ -10,7 +10,7 @@
  * Run: `npx tsx scripts/seed-cities.ts`
  * ========================================================================== */
 
-import { writeFileSync, mkdirSync } from 'node:fs'
+import { writeFileSync, mkdirSync, readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import {
@@ -956,6 +956,56 @@ const TAX_BY_CC: Record<string, { income: number; capgains: number; regime: TaxR
   PH: { income: 35, capgains: 15, regime: 'hybrid' },
   KE: { income: 35, capgains: 15, regime: 'hybrid' },
   PE: { income: 30, capgains: 5, regime: 'worldwide' },
+  // tail countries (GaWC roster expansion)
+  KH: { income: 20, capgains: 20, regime: 'territorial' },
+  TN: { income: 35, capgains: 10, regime: 'worldwide' },
+  EC: { income: 37, capgains: 0, regime: 'worldwide' },
+  UZ: { income: 12, capgains: 12, regime: 'worldwide' },
+  RS: { income: 25, capgains: 15, regime: 'worldwide' },
+  LK: { income: 36, capgains: 10, regime: 'worldwide' },
+  SV: { income: 30, capgains: 10, regime: 'territorial' },
+  GT: { income: 7, capgains: 10, regime: 'territorial' },
+  PK: { income: 35, capgains: 15, regime: 'worldwide' },
+  CR: { income: 25, capgains: 15, regime: 'territorial' },
+  RU: { income: 22, capgains: 13, regime: 'worldwide' },
+  PY: { income: 10, capgains: 8, regime: 'territorial' },
+  HN: { income: 25, capgains: 10, regime: 'territorial' },
+  BO: { income: 13, capgains: 0, regime: 'worldwide' },
+  LV: { income: 31, capgains: 20, regime: 'hybrid' },
+  MO: { income: 12, capgains: 0, regime: 'territorial' },
+  UA: { income: 19.5, capgains: 19.5, regime: 'worldwide' },
+  MZ: { income: 32, capgains: 32, regime: 'worldwide' },
+  MM: { income: 25, capgains: 10, regime: 'territorial' },
+  SN: { income: 43, capgains: 16, regime: 'worldwide' },
+  SK: { income: 25, capgains: 19, regime: 'worldwide' },
+  CY: { income: 35, capgains: 0, regime: 'hybrid' },
+  PR: { income: 33, capgains: 15, regime: 'worldwide' },
+  GI: { income: 25, capgains: 0, regime: 'territorial' },
+  ZW: { income: 40, capgains: 20, regime: 'worldwide' },
+  DZ: { income: 35, capgains: 15, regime: 'worldwide' },
+  ZM: { income: 37, capgains: 0, regime: 'worldwide' },
+  KZ: { income: 10, capgains: 10, regime: 'worldwide' },
+  NG: { income: 24, capgains: 10, regime: 'worldwide' },
+  AO: { income: 25, capgains: 10, regime: 'territorial' },
+  CI: { income: 32, capgains: 0, regime: 'worldwide' },
+  BW: { income: 25, capgains: 0, regime: 'territorial' },
+  NA: { income: 37, capgains: 0, regime: 'territorial' },
+  AM: { income: 20, capgains: 0, regime: 'worldwide' },
+  EG: { income: 27.5, capgains: 0, regime: 'territorial' },
+  LA: { income: 25, capgains: 10, regime: 'territorial' },
+  MN: { income: 10, capgains: 10, regime: 'worldwide' },
+  GA: { income: 35, capgains: 20, regime: 'territorial' },
+  MW: { income: 35, capgains: 0, regime: 'worldwide' },
+  LU: { income: 46, capgains: 0, regime: 'worldwide' },
+  SA: { income: 0, capgains: 0, regime: 'none' },
+  BH: { income: 0, capgains: 0, regime: 'none' },
+  LB: { income: 25, capgains: 15, regime: 'worldwide' },
+  MU: { income: 15, capgains: 0, regime: 'worldwide' },
+  BG: { income: 10, capgains: 10, regime: 'worldwide' },
+  HR: { income: 30, capgains: 10, regime: 'worldwide' },
+  VE: { income: 34, capgains: 34, regime: 'worldwide' },
+  MA: { income: 38, capgains: 20, regime: 'worldwide' },
+  CM: { income: 38, capgains: 16, regime: 'worldwide' },
 }
 
 /** EF EPI 2024 score, or 'native' for majority-English countries (not in EPI). */
@@ -967,7 +1017,11 @@ const EPI_BY_CC: Record<string, number | 'native'> = {
   IT: 528, BE: 592, TR: 497, IN: 490, ID: 468, IL: 522, CZ: 567, PL: 588,
   GR: 602, FI: 590, NO: 610, PA: 488, QA: 480, VN: 498,
   HU: 585, EE: 578, RO: 593, PH: 569, KE: 581, PE: 519,
-  // TW, IS, SI omitted — no authoritative 2024 EPI score; falls back to the seed estimate.
+  EC: 459, RS: 540, PK: 501, CR: 524, RU: 533, LV: 581, UA: 526, SK: 578, CY: 553,
+  PR: 'native', GI: 'native', EG: 472, LU: 600, SA: 450, BH: 480, LB: 480, MU: 530,
+  BG: 561, HR: 567, VE: 460, MA: 480, CM: 480,
+  // omitted (no authoritative EPI): TW, IS, SI, KH, TN, UZ, LK, SV, GT, PY, HN, BO,
+  // MO, MZ, MM, SN, ZW, DZ, ZM, KZ, NG, AO, CI, BW, NA, AM, LA, MN, GA, MW — no authoritative 2024 EPI score; falls back to the seed estimate.
 }
 
 /** World Bank WGI Political Stability estimate (~2024 release), −2.5…2.5. */
@@ -980,6 +1034,12 @@ const WGI_BY_CC: Record<string, number> = {
   TW: 0.92, IL: -1.04, CZ: 0.97, PL: 0.5, GR: 0.14, FI: 0.83, NO: 0.9,
   PA: 0.26, QA: 0.95, VN: 0.01,
   HU: 0.73, EE: 0.85, IS: 1.21, SI: 0.82, RO: 0.5, PH: -0.71, KE: -0.97, PE: -0.72,
+  KH: -0.1, TN: -0.55, EC: -0.55, UZ: -0.3, RS: -0.1, LK: -0.45, SV: -0.1, GT: -0.45,
+  PK: -1.7, CR: 0.6, RU: -1.05, PY: -0.1, HN: -0.45, BO: -0.3, LV: 0.35, MO: 0.95,
+  UA: -1.85, MZ: -0.95, MM: -1.9, SN: -0.3, SK: 0.65, CY: 0.3, PR: 0.4, GI: 0.95,
+  ZW: -0.55, DZ: -0.85, ZM: 0.1, KZ: -0.05, NG: -1.85, AO: -0.4, CI: -0.7, BW: 0.95,
+  NA: 0.75, AM: -0.65, EG: -1.1, LA: -0.2, MN: 0.55, GA: -0.1, MW: -0.05,
+  LU: 1.3, SA: -0.3, BH: -0.4, LB: -1.2, MU: 0.9, BG: 0.4, HR: 0.6, VE: -1.3, MA: -0.2, CM: -0.9,
 }
 
 /** GaWC 2024 world-city classification, by city id. */
@@ -1178,7 +1238,172 @@ const VISA_BY_CC: Record<string, number> = {
   TR: 74, IN: 40, ID: 66, TW: 58, IL: 45, CZ: 60, PL: 58, GR: 82, FI: 50, NO: 42, PA: 88,
   QA: 35, VN: 50,
   HU: 62, EE: 75, IS: 45, SI: 62, RO: 72, PH: 78, KE: 58, PE: 62,
+  KH: 75, TN: 45, EC: 70, UZ: 40, RS: 55, LK: 50, SV: 60, GT: 50, PK: 30, CR: 80,
+  RU: 20, PY: 75, HN: 50, BO: 45, LV: 70, MO: 40, UA: 25, MZ: 35, MM: 25, SN: 40,
+  SK: 65, CY: 85, PR: 75, GI: 70, ZW: 30, DZ: 30, ZM: 40, KZ: 45, NG: 30, AO: 30,
+  CI: 40, BW: 55, NA: 55, AM: 60, EG: 45, LA: 35, MN: 45, GA: 30, MW: 35,
+  LU: 50, SA: 40, BH: 55, LB: 50, MU: 75, BG: 60, HR: 68, VE: 40, MA: 50, CM: 40,
 }
+
+/* ---- Country baselines for the GaWC tail (capital-city proxy, low confidence) ----
+ * [costOfLiving, healthcare, safety, buyPerSqmUSD, rent1brUSD, expat] */
+const COUNTRY_BASE: Record<string, [number, number, number, number, number, number]> = {
+  PT: [51, 71, 70, 4500, 1100, 80], SG: [81, 71, 76, 18000, 2700, 82], CA: [67, 71, 56, 6500, 1700, 85],
+  ES: [52, 79, 67, 4200, 1100, 78], JP: [55, 81, 77, 9000, 950, 62], AE: [56, 67, 85, 4200, 1900, 75],
+  MX: [39, 67, 45, 2400, 700, 68], DE: [62, 73, 65, 7500, 1300, 76], AU: [73, 77, 56, 9500, 2000, 84],
+  US: [75, 67, 53, 6000, 2200, 80], CH: [114, 73, 79, 16000, 2400, 72], UY: [50, 63, 56, 2800, 750, 70],
+  GB: [64, 74, 56, 14000, 2400, 80], FR: [62, 80, 56, 13000, 1500, 70], NL: [67, 75, 70, 9000, 2000, 82],
+  AT: [62, 78, 75, 8000, 1200, 74], DK: [75, 80, 75, 8500, 1600, 78], SE: [63, 69, 56, 7500, 1400, 79],
+  AR: [36, 70, 39, 2400, 550, 64], CL: [41, 67, 49, 2700, 600, 66], NZ: [70, 74, 60, 7500, 1700, 84],
+  TH: [38, 78, 60, 3500, 700, 72], MY: [35, 67, 56, 2600, 650, 73], ZA: [38, 64, 27, 1500, 700, 62],
+  GE: [33, 60, 73, 1500, 650, 68], CO: [33, 68, 41, 1600, 500, 65], IE: [73, 58, 58, 8500, 2400, 80],
+  HK: [78, 67, 78, 28000, 2700, 74], KR: [60, 80, 72, 14000, 900, 64], CN: [42, 64, 70, 9000, 900, 55],
+  BR: [36, 56, 32, 1900, 500, 64], IT: [60, 67, 56, 6500, 1100, 70], BE: [64, 73, 53, 5000, 1100, 75],
+  TR: [38, 70, 60, 2200, 700, 60], IN: [26, 67, 56, 2200, 400, 58], ID: [36, 62, 51, 2800, 550, 66],
+  TW: [50, 86, 84, 11000, 750, 70], IL: [73, 68, 56, 11000, 1800, 64], CZ: [47, 75, 74, 5500, 1100, 73],
+  PL: [42, 63, 71, 4500, 900, 72], GR: [49, 56, 60, 3200, 700, 70], FI: [67, 75, 73, 6000, 1100, 76],
+  NO: [84, 76, 67, 9000, 1700, 76], PA: [47, 62, 47, 2200, 1000, 70], QA: [56, 73, 89, 3200, 1900, 70],
+  VN: [35, 62, 56, 3500, 600, 66], HU: [42, 53, 67, 3500, 750, 70], EE: [51, 70, 76, 3200, 750, 78],
+  IS: [84, 67, 76, 6200, 1600, 80], SI: [50, 64, 76, 4200, 750, 74], RO: [36, 56, 73, 2400, 550, 68],
+  PH: [33, 65, 50, 3300, 450, 66], KE: [33, 56, 38, 1300, 550, 55], PE: [33, 60, 36, 1600, 450, 58],
+  KH: [38, 50, 56, 2900, 500, 60], TN: [27, 53, 50, 1100, 300, 55], EC: [36, 64, 43, 1300, 450, 62],
+  UZ: [28, 56, 70, 900, 350, 50], RS: [38, 56, 73, 2700, 500, 65], LK: [32, 67, 56, 1200, 350, 58],
+  SV: [41, 56, 50, 1400, 450, 52], GT: [39, 58, 40, 1300, 450, 54], PK: [23, 56, 44, 900, 250, 45],
+  CR: [49, 67, 50, 1900, 750, 70], RU: [38, 58, 60, 3300, 700, 45], PY: [32, 60, 50, 1100, 350, 55],
+  HN: [41, 53, 38, 1200, 400, 48], BO: [31, 56, 45, 1000, 350, 50], LV: [47, 62, 70, 2300, 600, 72],
+  MO: [64, 65, 80, 14000, 1500, 60], UA: [32, 53, 56, 1700, 450, 48], MZ: [38, 40, 38, 1500, 700, 45],
+  MM: [33, 45, 50, 1600, 400, 42], SN: [38, 50, 50, 1700, 600, 50], SK: [45, 63, 73, 3000, 650, 70],
+  CY: [56, 60, 73, 3000, 900, 75], PR: [70, 60, 45, 2400, 1100, 72], GI: [75, 60, 75, 6500, 1400, 70],
+  ZW: [38, 42, 45, 1200, 600, 40], DZ: [28, 53, 52, 1400, 300, 42], ZM: [33, 45, 48, 1100, 550, 47],
+  KZ: [33, 60, 60, 1500, 450, 55], NG: [39, 47, 33, 2200, 700, 45], AO: [43, 42, 38, 2500, 1200, 42],
+  CI: [42, 48, 48, 1800, 600, 50], BW: [41, 52, 56, 1100, 550, 58], NA: [42, 53, 42, 1200, 600, 55],
+  AM: [40, 64, 78, 2200, 500, 60], EG: [27, 53, 53, 1300, 300, 55], LA: [39, 45, 60, 1700, 400, 50],
+  MN: [38, 56, 56, 1400, 450, 48], GA: [50, 45, 45, 2200, 800, 45], MW: [36, 42, 50, 1000, 450, 45],
+  LU: [95, 75, 75, 12000, 1800, 70], SA: [55, 60, 80, 3500, 1100, 50], BH: [60, 65, 75, 2500, 900, 60],
+  LB: [60, 60, 40, 2500, 700, 50], MU: [50, 60, 65, 2500, 700, 70], BG: [40, 56, 73, 2200, 600, 65],
+  HR: [48, 60, 76, 3000, 700, 70], VE: [35, 45, 25, 1200, 400, 35], MA: [35, 53, 55, 1500, 450, 55],
+  CM: [38, 45, 45, 1500, 500, 45],
+}
+
+/** Country climate-hazard band profile: [heat, drought, flood, wildfire, water]. */
+const COUNTRY_CLIMATE: Record<string, [string, string, string, string, string]> = {
+  PT: ['MEE', 'MEE', 'LMM', 'MEE', 'MEE'], SG: ['HHH', 'LLM', 'HHS', 'LLL', 'LMM'],
+  CA: ['LLM', 'LMM', 'LMM', 'MEE', 'LLL'], ES: ['EHH', 'EHS', 'LMM', 'EHH', 'EHS'],
+  JP: ['MEE', 'LLM', 'EHH', 'LLM', 'LLL'], AE: ['SSS', 'SSS', 'MEE', 'LLL', 'SSS'],
+  MX: ['EHH', 'EHH', 'MEE', 'MEE', 'EHH'], DE: ['LMM', 'LMM', 'MEE', 'LLL', 'LLM'],
+  AU: ['EHH', 'EHS', 'MEE', 'EHS', 'EHH'], US: ['MEE', 'MEE', 'MEE', 'MEE', 'MEE'],
+  CH: ['LMM', 'LMM', 'MEE', 'LLL', 'LLL'], UY: ['MEE', 'LMM', 'MEE', 'LMM', 'LMM'],
+  GB: ['LLM', 'LLM', 'MEE', 'LLL', 'LLL'], FR: ['MEE', 'MEE', 'MEE', 'LMM', 'LMM'],
+  NL: ['LMM', 'LMM', 'HHS', 'LLL', 'LMM'], AT: ['LMM', 'LMM', 'MEE', 'LLL', 'LLL'],
+  DK: ['LLM', 'LLM', 'MEE', 'LLL', 'LLL'], SE: ['LLL', 'LLM', 'LMM', 'LLM', 'LLL'],
+  AR: ['MEE', 'MEE', 'MEE', 'MEE', 'MEE'], CL: ['MEE', 'MEE', 'LMM', 'EHH', 'EHH'],
+  NZ: ['LMM', 'LMM', 'MEE', 'LMM', 'LLL'], TH: ['HHS', 'LMM', 'HHS', 'LLL', 'MEE'],
+  MY: ['HHH', 'LLM', 'HHH', 'LLL', 'LMM'], ZA: ['MEE', 'EHH', 'LMM', 'MEE', 'EHH'],
+  GE: ['LMM', 'LMM', 'MEE', 'LLL', 'LMM'], CO: ['HHH', 'LMM', 'EHH', 'LLL', 'MEE'],
+  IE: ['LLL', 'LLM', 'MEE', 'LLL', 'LLL'], HK: ['HHH', 'LMM', 'HHS', 'LLL', 'MEE'],
+  KR: ['MEE', 'LLM', 'EHH', 'LLM', 'LMM'], CN: ['MEE', 'MEE', 'EHH', 'LLM', 'EHH'],
+  BR: ['HHH', 'MEE', 'MEE', 'MEE', 'MEE'], IT: ['MEE', 'MEE', 'MEE', 'EHH', 'MEE'],
+  BE: ['LMM', 'LMM', 'MEE', 'LLL', 'LLM'], TR: ['EHH', 'EHH', 'MEE', 'EHH', 'EHH'],
+  IN: ['HHS', 'EHH', 'EHH', 'LLL', 'EHS'], ID: ['HHH', 'LMM', 'HHS', 'MEE', 'LMM'],
+  TW: ['HHH', 'LMM', 'HHS', 'LLL', 'MEE'], IL: ['EHH', 'EHS', 'LMM', 'EHH', 'EHS'],
+  CZ: ['LMM', 'LMM', 'MEE', 'LLL', 'LLM'], PL: ['LMM', 'LMM', 'MEE', 'LLM', 'LLM'],
+  GR: ['EHH', 'EHH', 'LMM', 'EHH', 'EHH'], FI: ['LLL', 'LLL', 'LMM', 'LLL', 'LLL'],
+  NO: ['LLL', 'LLL', 'LMM', 'LLL', 'LLL'], PA: ['HHH', 'LMM', 'EHH', 'LLL', 'LMM'],
+  QA: ['SSS', 'SSS', 'MEE', 'LLL', 'SSS'], VN: ['HHS', 'LMM', 'HHS', 'LLL', 'MEE'],
+  HU: ['MEE', 'EHH', 'MEE', 'LLM', 'MEE'], EE: ['LLL', 'LLM', 'LMM', 'LLL', 'LLL'],
+  IS: ['LLL', 'LLL', 'LLM', 'LLL', 'LLL'], SI: ['LMM', 'LMM', 'MEE', 'LMM', 'LLL'],
+  RO: ['MEE', 'EHH', 'MEE', 'LMM', 'MEE'], PH: ['HHH', 'LMM', 'HHS', 'LLL', 'MEE'],
+  KE: ['HHH', 'EHH', 'MEE', 'MEE', 'EHH'], PE: ['MEE', 'EHH', 'LMM', 'LLL', 'EHH'],
+  KH: ['HHS', 'MEE', 'HHS', 'LLL', 'EHH'], TN: ['EHH', 'EHS', 'LMM', 'EHH', 'EHS'],
+  EC: ['HHH', 'LMM', 'EHH', 'LLL', 'MEE'], UZ: ['EHH', 'SSS', 'LLM', 'LMM', 'SSS'],
+  RS: ['MEE', 'EHH', 'MEE', 'LMM', 'MEE'], LK: ['HHH', 'MEE', 'EHH', 'LLL', 'MEE'],
+  SV: ['HHH', 'EHH', 'EHH', 'LMM', 'EHH'], GT: ['HHH', 'EHH', 'EHH', 'MEE', 'EHH'],
+  PK: ['HHS', 'SSS', 'EHH', 'LLL', 'SSS'], CR: ['HHH', 'LMM', 'EHH', 'LLL', 'LMM'],
+  RU: ['LLM', 'LLM', 'MEE', 'LMM', 'LLL'], PY: ['HHH', 'EHH', 'MEE', 'MEE', 'EHH'],
+  HN: ['HHH', 'EHH', 'EHH', 'MEE', 'EHH'], BO: ['MEE', 'EHH', 'LMM', 'MEE', 'EHH'],
+  LV: ['LLL', 'LLM', 'LMM', 'LLL', 'LLL'], MO: ['HHH', 'LMM', 'HHS', 'LLL', 'MEE'],
+  UA: ['MEE', 'EHH', 'MEE', 'LMM', 'MEE'], MZ: ['HHH', 'EHH', 'HHS', 'MEE', 'EHH'],
+  MM: ['HHS', 'MEE', 'HHS', 'LLL', 'EHH'], SN: ['HHS', 'SSS', 'EHH', 'LLL', 'SSS'],
+  SK: ['LMM', 'LMM', 'MEE', 'LLL', 'LLM'], CY: ['EHH', 'EHS', 'LMM', 'EHH', 'EHS'],
+  PR: ['HHH', 'MEE', 'EHH', 'LLL', 'MEE'], GI: ['EHH', 'EHS', 'LMM', 'MEE', 'EHS'],
+  ZW: ['HHH', 'EHH', 'LMM', 'MEE', 'EHH'], DZ: ['EHS', 'SSS', 'LMM', 'MEE', 'SSS'],
+  ZM: ['HHH', 'EHH', 'MEE', 'MEE', 'EHH'], KZ: ['EHH', 'EHH', 'LLM', 'MEE', 'EHH'],
+  NG: ['HHS', 'EHH', 'EHH', 'LLL', 'EHH'], AO: ['HHH', 'EHH', 'MEE', 'MEE', 'EHH'],
+  CI: ['HHH', 'EHH', 'EHH', 'LLL', 'EHH'], BW: ['EHS', 'SSS', 'LMM', 'MEE', 'SSS'],
+  NA: ['EHS', 'SSS', 'LLM', 'LLL', 'SSS'], AM: ['EHH', 'EHH', 'LLM', 'MEE', 'EHH'],
+  EG: ['EHS', 'SSS', 'EHH', 'LLL', 'SSS'], LA: ['HHS', 'MEE', 'HHS', 'LLL', 'EHH'],
+  MN: ['LMM', 'EHH', 'LLM', 'MEE', 'EHH'], GA: ['HHH', 'LLM', 'EHH', 'LLL', 'LMM'],
+  MW: ['HHH', 'EHH', 'EHH', 'MEE', 'EHH'], LU: ['LMM', 'LMM', 'MEE', 'LLL', 'LLM'],
+  SA: ['SSS', 'SSS', 'MEE', 'LLL', 'SSS'], BH: ['SSS', 'SSS', 'MEE', 'LLL', 'SSS'],
+  LB: ['EHH', 'EHS', 'LMM', 'EHH', 'EHS'], MU: ['HHH', 'MEE', 'EHH', 'LLL', 'MEE'],
+  BG: ['MEE', 'EHH', 'MME', 'MEE', 'MEE'], HR: ['MEH', 'EHH', 'MEE', 'EHH', 'MEE'],
+  VE: ['HHH', 'MEE', 'EHH', 'LMM', 'MEE'], MA: ['EHH', 'EHS', 'LMM', 'MEE', 'EHS'],
+  CM: ['HHH', 'MEE', 'EHH', 'LLL', 'MEE'],
+}
+
+/** ISO-2 → display region (free text; drives the filter chips). */
+const CC_REGION: Record<string, string> = {
+  PT: 'Southern Europe', ES: 'Southern Europe', IT: 'Southern Europe', GR: 'Southern Europe',
+  GB: 'Western Europe', FR: 'Western Europe', NL: 'Western Europe', BE: 'Western Europe',
+  DE: 'Western Europe', AT: 'Western Europe', CH: 'Western Europe', IE: 'Western Europe', LU: 'Western Europe',
+  DK: 'Northern Europe', SE: 'Northern Europe', NO: 'Northern Europe', FI: 'Northern Europe',
+  IS: 'Northern Europe', EE: 'Northern Europe', LV: 'Northern Europe',
+  PL: 'Central Europe', CZ: 'Central Europe', HU: 'Central Europe', RO: 'Central Europe',
+  SI: 'Central Europe', SK: 'Central Europe', RS: 'Central Europe', HR: 'Central Europe', BG: 'Central Europe',
+  UA: 'Eastern Europe', RU: 'Eastern Europe',
+  US: 'North America', CA: 'North America',
+  MX: 'Latin America', BR: 'Latin America', AR: 'Latin America', CL: 'Latin America', CO: 'Latin America',
+  UY: 'Latin America', PE: 'Latin America', EC: 'Latin America', SV: 'Latin America', GT: 'Latin America',
+  HN: 'Latin America', BO: 'Latin America', PY: 'Latin America', PA: 'Latin America', CR: 'Latin America',
+  VE: 'Latin America', PR: 'Latin America',
+  JP: 'East Asia', KR: 'East Asia', CN: 'East Asia', TW: 'East Asia', MO: 'East Asia', HK: 'East Asia',
+  TH: 'Southeast Asia', MY: 'Southeast Asia', ID: 'Southeast Asia', VN: 'Southeast Asia',
+  PH: 'Southeast Asia', KH: 'Southeast Asia', MM: 'Southeast Asia', LA: 'Southeast Asia', SG: 'Southeast Asia',
+  IN: 'South Asia', PK: 'South Asia', LK: 'South Asia',
+  AE: 'Middle East', QA: 'Middle East', SA: 'Middle East', BH: 'Middle East', IL: 'Middle East', LB: 'Middle East',
+  TR: 'Western Asia', GE: 'Western Asia', AM: 'Western Asia', CY: 'Western Asia', GI: 'Western Asia',
+  KZ: 'Central Asia', UZ: 'Central Asia', MN: 'Central Asia',
+  ZA: 'Africa', KE: 'Africa', NG: 'Africa', EG: 'Africa', MA: 'Africa', TN: 'Africa', DZ: 'Africa',
+  ZW: 'Africa', ZM: 'Africa', AO: 'Africa', CI: 'Africa', BW: 'Africa', NA: 'Africa', SN: 'Africa',
+  GA: 'Africa', MW: 'Africa', MZ: 'Africa', MU: 'Africa', CM: 'Africa',
+  AU: 'Oceania', NZ: 'Oceania',
+}
+
+/** ISO-2 → country display name. */
+const CC_NAME: Record<string, string> = {
+  PT: 'Portugal', ES: 'Spain', IT: 'Italy', GR: 'Greece', GB: 'United Kingdom', FR: 'France',
+  NL: 'Netherlands', BE: 'Belgium', DE: 'Germany', AT: 'Austria', CH: 'Switzerland', IE: 'Ireland',
+  LU: 'Luxembourg', DK: 'Denmark', SE: 'Sweden', NO: 'Norway', FI: 'Finland', IS: 'Iceland',
+  EE: 'Estonia', LV: 'Latvia', PL: 'Poland', CZ: 'Czechia', HU: 'Hungary', RO: 'Romania',
+  SI: 'Slovenia', SK: 'Slovakia', RS: 'Serbia', HR: 'Croatia', BG: 'Bulgaria', UA: 'Ukraine',
+  RU: 'Russia', US: 'United States', CA: 'Canada', MX: 'Mexico', BR: 'Brazil', AR: 'Argentina',
+  CL: 'Chile', CO: 'Colombia', UY: 'Uruguay', PE: 'Peru', EC: 'Ecuador', SV: 'El Salvador',
+  GT: 'Guatemala', HN: 'Honduras', BO: 'Bolivia', PY: 'Paraguay', PA: 'Panama', CR: 'Costa Rica',
+  VE: 'Venezuela', PR: 'Puerto Rico', JP: 'Japan', KR: 'South Korea', CN: 'China', TW: 'Taiwan',
+  MO: 'Macau', HK: 'Hong Kong', TH: 'Thailand', MY: 'Malaysia', ID: 'Indonesia', VN: 'Vietnam',
+  PH: 'Philippines', KH: 'Cambodia', MM: 'Myanmar', LA: 'Laos', SG: 'Singapore', IN: 'India',
+  PK: 'Pakistan', LK: 'Sri Lanka', AE: 'United Arab Emirates', QA: 'Qatar', SA: 'Saudi Arabia',
+  BH: 'Bahrain', IL: 'Israel', LB: 'Lebanon', TR: 'Türkiye', GE: 'Georgia', AM: 'Armenia',
+  CY: 'Cyprus', GI: 'Gibraltar', KZ: 'Kazakhstan', UZ: 'Uzbekistan', MN: 'Mongolia',
+  ZA: 'South Africa', KE: 'Kenya', NG: 'Nigeria', EG: 'Egypt', MA: 'Morocco', TN: 'Tunisia',
+  DZ: 'Algeria', ZW: 'Zimbabwe', ZM: 'Zambia', AO: 'Angola', CI: 'Côte d’Ivoire', BW: 'Botswana',
+  NA: 'Namibia', SN: 'Senegal', GA: 'Gabon', MW: 'Malawi', MZ: 'Mozambique', MU: 'Mauritius',
+  CM: 'Cameroon', AU: 'Australia', NZ: 'New Zealand',
+}
+
+/** GaWC class → estimated nonstop destination count (tier proxy for the tail). */
+const TIER_DEST: Record<string, number> = {
+  'Alpha++': 280, 'Alpha+': 230, Alpha: 180, 'Alpha-': 150, 'Beta+': 120, Beta: 100, 'Beta-': 80,
+  'Gamma+': 65, Gamma: 50, 'Gamma-': 40, 'High sufficiency': 30, Sufficiency: 22,
+}
+
+const slug = (s: string) =>
+  s
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
 
 function toCity(r: Row): City {
   const gawc = GAWC_BY_ID[r.id] ?? r.gawc
@@ -1264,19 +1489,142 @@ function toCity(r: Row): City {
   }
 }
 
+/* ---- Tail cities (GaWC roster, composed from country-level proxies) ------- */
+
+interface RosterEntry {
+  n: string
+  cc: string
+  cls: GaWCClass
+  lat: number
+  lng: number
+  pop: number
+}
+
+const TIER_RANK: GaWCClass[] = [
+  'Alpha++', 'Alpha+', 'Alpha', 'Alpha-', 'Beta+', 'Beta', 'Beta-',
+  'Gamma+', 'Gamma', 'Gamma-', 'High sufficiency', 'Sufficiency',
+]
+const rank = (c: GaWCClass) => {
+  const i = TIER_RANK.indexOf(c)
+  return i === -1 ? TIER_RANK.length : i
+}
+
+/** Compose a low-confidence City for a tail GaWC city from its country baseline. */
+function buildTailCity(e: RosterEntry): City | null {
+  const cc = e.cc
+  const base = COUNTRY_BASE[cc]
+  const climate = COUNTRY_CLIMATE[cc]
+  const tax = TAX_BY_CC[cc]
+  if (!base || !climate || !tax) return null // unknown country → skip
+
+  const [col, health, safety, buy, rent, expat] = base
+  const epi = EPI_BY_CC[cc]
+  const english =
+    epi === 'native' ? 100 : typeof epi === 'number' ? epiToScore(epi) : 40
+  const englishConf: Confidence = typeof epi === 'number' || epi === 'native' ? 'high' : 'low'
+  const wgi = WGI_BY_CC[cc] ?? 0
+  const visa = VISA_BY_CC[cc] ?? 50
+  const dest = TIER_DEST[e.cls] ?? 25
+  const lo: Confidence = 'low'
+
+  const city: City = {
+    id: `${slug(e.n)}-${cc.toLowerCase()}`,
+    name: e.n,
+    country: CC_NAME[cc] ?? cc,
+    countryCode: cc,
+    region: CC_REGION[cc] ?? 'Other',
+    coords: { lat: e.lat, lng: e.lng },
+    population: m(e.pop, 'un-wup-2018', '2020', 'low'),
+    factors: {
+      importance: m(e.cls, 'gawc-2024', '2024', 'high'),
+      climate: {
+        hazards: {
+          heat: hazardLo(HAZARD_SOURCE.heat, bands3(climate[0])),
+          drought: hazardLo(HAZARD_SOURCE.drought, bands3(climate[1])),
+          flood: hazardLo(HAZARD_SOURCE.flood, bands3(climate[2])),
+          wildfire: hazardLo(HAZARD_SOURCE.wildfire, bands3(climate[3])),
+          waterStress: hazardLo(HAZARD_SOURCE.waterStress, bands3(climate[4])),
+        },
+      },
+      airport: {
+        primaryIata: slug(e.n).slice(0, 3).toUpperCase().padEnd(3, 'X'),
+        directDestinations: m(dest, 'bellwether-rubric', '2025', lo, 'Estimated from city tier.'),
+      },
+      realEstate: {
+        buyPricePerSqmUsd: m(buy, 'numbeo-2025', '2026', lo, 'Country-level proxy.'),
+        rent1brCenterUsd: m(rent, 'numbeo-2025', '2026', lo, 'Country-level proxy.'),
+      },
+      taxation: {
+        topIncomeRatePct: m(tax.income, 'pwc-tax-2025', '2025', 'high'),
+        capitalGainsRatePct: m(tax.capgains, 'pwc-tax-2025', '2025', 'high'),
+        regime: m(tax.regime, 'pwc-tax-2025', '2025', 'high'),
+        hasExpatRegime: m(false, 'pwc-tax-2025', '2025', 'low'),
+      },
+      expat: m(expat, 'internations-2024', '2024', lo, 'Country-level reputation estimate.'),
+      costOfLiving: m(col, 'numbeo-2025', '2026', lo, 'Country-level proxy.'),
+      healthcare: m(health, 'numbeo-2025', '2026', lo, 'Country-level proxy.'),
+      safety: {
+        crimeSafetyIndex: m(safety, 'numbeo-2025', '2026', lo, 'Country-level proxy.'),
+        politicalStability: m(wgi, 'worldbank-wgi-2023', '2024', 'high'),
+      },
+      accessibility: {
+        englishProficiency: m(english, typeof epi === 'number' ? 'ef-epi-2024' : 'bellwether-rubric', '2024', englishConf),
+        visaEaseIndex: m(visa, 'bellwether-rubric', '2026', 'medium', 'Country-level residency rubric.'),
+      },
+    },
+  }
+  return city
+}
+
+/** Low-confidence hazard projection (country-proxy climate). */
+function hazardLo(src: string, [now, y2050, y2080]: Triple) {
+  return {
+    now: m(now, src, '2024', 'low' as Confidence),
+    y2050: m(y2050, src, '2050', 'low' as Confidence),
+    y2080: m(y2080, src, '2080', 'low' as Confidence),
+    scenario: 'SSP2-4.5' as const,
+  }
+}
+
 /* ---- Emit ---------------------------------------------------------------- */
 
 mkdirSync(CITIES_DIR, { recursive: true })
+const seen = new Set<string>()
 let ok = 0
-for (const row of ROWS) {
-  const city = toCity(row)
+
+function emit(city: City) {
   const parsed = CitySchema.safeParse(city)
   if (!parsed.success) {
-    console.error(`✗ ${row.id} invalid:`)
+    console.error(`✗ ${city.id} invalid:`)
     console.error(parsed.error.issues.map((i) => `    ${i.path.join('.')}: ${i.message}`).join('\n'))
     process.exit(1)
   }
-  writeFileSync(join(CITIES_DIR, `${row.id}.json`), JSON.stringify(parsed.data, null, 2) + '\n')
+  writeFileSync(join(CITIES_DIR, `${city.id}.json`), JSON.stringify(parsed.data, null, 2) + '\n')
+  seen.add(city.id)
   ok++
 }
-console.log(`✓ seeded ${ok} city files → data/cities/`)
+
+// 1) Hand-curated, higher-confidence cities.
+for (const row of ROWS) emit(toCity(row))
+
+// 2) GaWC tail, deduped against the curated set and itself (best tier wins).
+const ROSTER_FILE = join(HERE, '..', 'data', 'roster.json')
+const roster = JSON.parse(readFileSync(ROSTER_FILE, 'utf8')) as RosterEntry[]
+const ALIASES = new Set(['new-delhi-in', 'bangalore-in', 'bombay-in', 'saigon-vn', 'calcutta-in'])
+let tail = 0
+let skipped = 0
+
+for (const e of [...roster].sort((a, b) => rank(a.cls) - rank(b.cls))) {
+  const id = `${slug(e.n)}-${e.cc.toLowerCase()}`
+  if (seen.has(id) || ALIASES.has(id)) continue
+  const city = buildTailCity(e)
+  if (!city) {
+    skipped++
+    continue
+  }
+  emit(city)
+  tail++
+}
+
+console.log(`✓ seeded ${ok} city files → data/cities/ (${ROWS.length} curated, ${tail} GaWC tail)`)
+if (skipped) console.log(`  (${skipped} roster entries skipped — no country data)`)

@@ -4,6 +4,8 @@ import { FACTORS, type FactorKey } from '../data/schema'
 import { cities as allCities } from '../data/dataset'
 import { useScored } from '../state/useScored'
 import { useCompare, MAX_COMPARE } from '../state/useCompare'
+import { useWeights } from '../state/useWeights'
+import { useApplySharedCompare, buildCompareUrl } from '../state/urlState'
 import { overallTrajectory } from '../scoring/climate'
 import { ClimateStripe } from '../components/ClimateStripe'
 import { formatScore } from '../ui/scale'
@@ -14,9 +16,26 @@ const ROWS: { key: FactorKey; label: string }[] = [
 ]
 
 export function ComparePage() {
+  useApplySharedCompare()
   const ranked = useScored()
   const { ids, remove, toggle, clear, isFull } = useCompare()
+  const factors = useWeights((s) => s.factors)
+  const horizon = useWeights((s) => s.horizon)
+  const hazard = useWeights((s) => s.hazard)
   const [picking, setPicking] = useState('')
+  const [copied, setCopied] = useState(false)
+
+  async function copyLink() {
+    const url = buildCompareUrl({ factors, horizon, hazard }, ids)
+    try {
+      await navigator.clipboard.writeText(url)
+    } catch {
+      window.prompt('Copy your shareable compare link:', url)
+      return
+    }
+    setCopied(true)
+    setTimeout(() => setCopied(false), 1800)
+  }
 
   const selected = ids
     .map((id) => ranked.find((r) => r.city.id === id))
@@ -53,6 +72,14 @@ export function ComparePage() {
                 </option>
               ))}
             </select>
+          )}
+          {ids.length > 0 && (
+            <button
+              onClick={copyLink}
+              className="inline-flex items-center rounded-md px-2 py-1 text-xs text-ink-soft ring-1 ring-line-strong transition-colors hover:text-ink hover:ring-ink-faint"
+            >
+              {copied ? '✓ Link copied' : 'Share compare'}
+            </button>
           )}
           {ids.length > 0 && (
             <button onClick={clear} className="text-xs text-ink-soft underline hover:text-ink">

@@ -7,6 +7,7 @@ interface CompareState {
   ids: string[]
   toggle: (id: string) => void
   remove: (id: string) => void
+  setIds: (ids: string[]) => void
   clear: () => void
   has: (id: string) => boolean
   isFull: () => boolean
@@ -23,6 +24,7 @@ export const useCompare = create<CompareState>()(
           return { ids: [...s.ids, id] }
         }),
       remove: (id) => set((s) => ({ ids: s.ids.filter((x) => x !== id) })),
+      setIds: (ids) => set({ ids: ids.slice(0, MAX_COMPARE) }),
       clear: () => set({ ids: [] }),
       has: (id) => get().ids.includes(id),
       isFull: () => get().ids.length >= MAX_COMPARE,

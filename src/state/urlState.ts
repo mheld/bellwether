@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react'
 import { FACTORS, HORIZONS, HAZARDS, type FactorKey, type Hazard, type Horizon } from '../data/schema'
 import { useWeights, type WeightsState } from './useWeights'
+import { cityById } from '../data/dataset'
+import { useCompare } from './useCompare'
 
 export const SHARE_VERSION = 1
 
@@ -21,6 +23,21 @@ export function encodeWeights(s: Slice): string {
 export function buildShareUrl(s: Slice): string {
   const { origin, pathname } = window.location
   return `${origin}${pathname}?${encodeWeights(s)}`
+}
+
+/** Build a shareable /compare URL carrying the selected cities + current weights. */
+export function buildCompareUrl(s: Slice, ids: string[]): string {
+  const { origin } = window.location
+  const params = `cities=${ids.join(',')}&${encodeWeights(s)}`
+  return `${origin}/compare?${params}`
+}
+
+/** Parse a comma-separated `cities` param into known city ids. */
+export function decodeCities(params: URLSearchParams): string[] | null {
+  const raw = params.get('cities')
+  if (!raw) return null
+  const ids = raw.split(',').filter((id) => cityById.has(id))
+  return ids.length ? ids : null
 }
 
 /** Parse weights from URL params; returns null if absent or unrecognized. */
@@ -67,4 +84,27 @@ export function useApplySharedWeights() {
       window.history.replaceState(null, '', clean)
     }
   }, [setAll])
+}
+
+/**
+ * On the compare page, apply a shared selection (cities + weights) from the URL,
+ * then strip the params so further edits don't fight the link.
+ */
+export function useApplySharedCompare() {
+  const setAll = useWeights((s) => s.setAll)
+  const setIds = useCompare((s) => s.setIds)
+  const applied = useRef(false)
+
+  useEffect(() => {
+    if (applied.current) return
+    applied.current = true
+    const params = new URLSearchParams(window.location.search)
+    const cities = decodeCities(params)
+    const weights = decodeWeights(params)
+    if (weights) setAll(weights)
+    if (cities) setIds(cities)
+    if (cities || weights) {
+      window.history.replaceState(null, '', window.location.pathname + window.location.hash)
+    }
+  }, [setAll, setIds])
 }

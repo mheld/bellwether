@@ -6,6 +6,12 @@ airport connectivity, taxation, expat-friendliness, healthcare, safety, and visa
 
 Pure static frontend, no backend, no live APIs — deploys free on Cloudflare Pages or Vercel.
 
+> **On the data:** values are approximate estimates compiled from public indices
+> (GaWC, PwC, EF EPI, World Bank, Numbeo, WRI Aqueduct/IPCC, InterNations) — not a
+> redistribution of any provider's dataset, and not relocation advice. Confidence
+> varies by factor and is shown on every value; verify before relying on it. See the
+> in-app **Methodology** page for the full breakdown.
+
 ## Stack
 
 - **React + Vite + TypeScript + Tailwind v4**

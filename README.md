@@ -81,10 +81,17 @@ factors are excluded and their weight redistributed. Climate folds five hazards 
 horizons (today / 2050 / 2080, SSP2-4.5), with user-adjustable horizon emphasis. Full details
 live on the in-app Methodology page and in `src/scoring/`.
 
-## Deploy (Cloudflare Pages)
+## Deploy (Cloudflare Workers)
+
+Configured as a static-assets Worker via `wrangler.jsonc` (assets dir `./dist`,
+`not_found_handling: "single-page-application"` so client routes like `/city/:id`
+and `/compare` resolve to `index.html`). With the repo connected to Cloudflare:
 
 - **Build command:** `npm run build`
-- **Output directory:** `dist`
-- SPA routing is handled by `public/_redirects` (`/* /index.html 200`).
+- **Deploy command:** `npx wrangler deploy`
 
-Vercel works identically (framework preset: Vite; output `dist`).
+> SPA routing is handled by the Worker config, **not** a `_redirects` file — the
+> Workers assets handler rejects a `/* /index.html 200` catch-all as a redirect loop.
+
+Vercel / Cloudflare Pages also work (framework preset: Vite, output `dist`); for
+Pages, add a `public/_redirects` with `/* /index.html 200`.

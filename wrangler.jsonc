@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bellwether",
+  "compatibility_date": "2025-11-01",
+  // Static-assets-only Worker. SPA mode serves index.html for unknown paths
+  // (client-side routes like /city/:id and /compare) without a _redirects loop.
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
